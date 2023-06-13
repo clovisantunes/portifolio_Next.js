@@ -1,0 +1,20 @@
+.button{
+    margin-top: 2.5vh;
+    margin-right: 1vh;
+    width: 7vh;
+    height:7vh;
+    color: var(--pink);
+    border: solid 2px var(--grey-700);
+    border-radius: 1vh;
+    background-color: var(--grey-900);
+    box-shadow:  1px 1px 1px .5px var(--grey-700);
+    transition: all .5s ease;
+    
+    svg{
+        width: 60%;
+        height: 60%;
+    }
+}
+.button:hover{
+    border: solid 2px var(--pink);
+}
