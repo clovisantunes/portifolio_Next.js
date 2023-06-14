@@ -1,0 +1,87 @@
+.container{
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+    height: 100%;
+}
+.containerProjects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 90%;
+}
+.text{
+    font-size: 2.5em;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+}
+.butonContainer{
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+}
+.buttonCard{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-wrap: wrap; 
+    width: 90%;
+}
+
+.imgCard{
+    width: 100%;
+    height: 65%;
+   z-index: 2;
+}
+.imgCard:hover{
+    width: 120%;
+    height: 90%;
+    z-index: 4;
+}
+.cover{
+    background-color: var(--grey-700);
+    width: 120%;
+    height: 16em;
+    position: absolute;
+    z-index: 3;
+    padding: .5em;
+}
+.miniIcons{
+    flex-direction: row;
+    display: flex;
+}
+.projectTitle {
+
+    text-align: center;
+   
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+
+  }
+  
+  .projectTitle.visible {
+    z-index: 3;
+    animation: fadeIn .8s ease;
+    
+  }
+
+
+  @keyframes fadeIn {
+    0% {
+    
+      bottom: 50%;
+    }
+    100% {
+      bottom: 0%;
+    }
+  }
+    

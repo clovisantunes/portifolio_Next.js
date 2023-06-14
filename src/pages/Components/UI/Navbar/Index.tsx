@@ -29,7 +29,7 @@ const  Navbar =() => {
             <a href="#skills">Conhecimentos</a>
           </li>
           <li className={styles.li}>
-            <a href="#">Projetos</a>
+            <a href="#Projects">Projetos</a>
           </li>
           <li className={styles.li}>
             <a href="#">Contato</a>
