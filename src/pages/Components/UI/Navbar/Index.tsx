@@ -19,27 +19,21 @@ const  Navbar =() => {
         <nav className={styles.navbar}>
           <Image src={logoImg} alt="Logo" className={styles.logoImg} />
           <ul className={styles.items} data-aos="fade-left">
-            <li className={styles.li} >
-              <h2>
-                <a>Inicio</a>
-              </h2>
-            </li>
-            <li className={styles.li}>
-              <h2>
-                <a>Sobre</a>
-              </h2>
-            </li>
-            <li className={styles.li}>
-              <h2>
-                <a>Conhecimentos</a>
-              </h2>
-            </li>
-            <li className={styles.li}>
-              <h2><a>Projetos</a></h2>
-            </li>
-             <li className={styles.li}>
-              <h2><a>Contato</a></h2>
-            </li>
+          <li className={styles.li}>
+            <a href="#main">Inicio</a>
+          </li>
+          <li className={styles.li}>
+            <a href="#cardProfile">Sobre</a>
+          </li>
+          <li className={styles.li}>
+            <a href="#skills">Conhecimentos</a>
+          </li>
+          <li className={styles.li}>
+            <a href="#">Projetos</a>
+          </li>
+          <li className={styles.li}>
+            <a href="#">Contato</a>
+          </li>
           </ul>
         </nav>
       </div>

@@ -3,7 +3,7 @@
     margin-right: 1vh;
     width: 7vh;
     height:7vh;
-    color: var(--pink);
+    color: var(--grey);
     border: solid 2px var(--grey-700);
     border-radius: 1vh;
     background-color: var(--grey-900);
@@ -17,4 +17,5 @@
 }
 .button:hover{
     border: solid 2px var(--pink);
+    color: var(--pink);
 }

@@ -2,8 +2,8 @@ import Head from "next/head";
 import styles from "../../styles/home.module.scss";
 import Navbar from "./Components/UI/Navbar/Index";
 import Main from "../pages/Components/Main/Index";
-import  Card  from "./Components/Card";
-import { Skils } from "./Components/Skils";
+import { Skills } from "./Components/Skils";
+import CardProfile from "./Components/Card";
 
 
 export default function Home() {
@@ -11,20 +11,20 @@ export default function Home() {
     <>
       <Head>
         <title>Clovis Antunes || Portifolio</title>
-        <link rel="shortcut icon" href='../../public/favicon.ico'/>
+        <link rel="shortcut icon" href='/favicon.ico'/>
       </Head>
       <div className={styles.containerCenter}>
         <div>
           <Navbar />
         </div>
-        <div>
-          <Main  />
+        <div id="main">
+          <Main />
         </div>
-        <div>
-          <Card />
+        <div id="cardProfile">
+          <CardProfile />
         </div>
-        <div>
-          <Skils />
+        <div id="skills">
+          <Skills />
         </div>
       </div>
     </>

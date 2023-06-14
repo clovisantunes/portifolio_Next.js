@@ -1,72 +1,75 @@
-.containerMain{
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0% 0% 0 25%;
+.containerMain {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0% 0% 0 25%;
 }
-.intro{
-    h2{
-        font-size: 8vh;
-        color:var(--white);
-    }
-    h1{
-        color: var(--pink);
-        font-size: 4em;
-    }
-    p{
-        font-size: 2em;
-        color: var(--grey);
-    }
+.intro {
+  h2 {
+    font-size: 8vh;
+    color: var(--white);
+  }
+  h1 {
+    color: var(--pink);
+    font-size: 4em;
+  }
+  p {
+    font-size: 2em;
+    color: var(--grey);
+  }
 }
-.containerItems{
-    width: 100%;
-    height: 100%;
+.containerItems {
+  width: 100%;
+  height: 100%;
+  margin-top: 10rem;
 }
-.image{
-    width: 100%;
-    height: 100%;
+.image {
+  width: 100%;
+  height: 100%;
 }
-.imgMain{
-    width: 100%;
-    height: 100%;
+.imgMain {
+  width: 100%;
+  height: 100%;
 }
 
-@media (max-width: 1100px){
-    .containerMain{
-        flex-direction: column;
-        margin: 0;
+@media (max-width: 1100px) {
+  .containerMain {
+    flex-direction: column;
+    margin: 0;
+  }
+  .image {
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .imgMain {
+    width: 30vh;
+    height: 30vh;
+  }
+  .containerItems {
+    text-align: center;
+  }
+  .intro {
+    h2 {
+      font-size: 5vh;
+      color: var(--white);
     }
-    .image{
-        width: 50%;
-        height: 100%;    
+    h1 {
+      color: var(--pink);
+      font-size: 3em;
     }
-    .imgMain{
-        width: 30vh;
-        height: 30vh;
+    p {
+      font-size: 1em;
+      color: var(--grey);
     }
-    .containerItems{
-        text-align: center;
-    }
-    .intro{
-        h2{
-            font-size: 5vh;
-            color:var(--white);
-        }
-        h1{
-            color: var(--pink);
-            font-size: 3em;
-        }
-        p{
-            font-size: 1em;
-            color: var(--grey);
-        }
-    }
+  }
 }
-@media (max-width: 760){
-   
-    .image{
-        width: 50%;
-        height: 100%;    
-    }
+@media (max-width: 760) {
+  .image {
+    width: 50%;
+    height: 100%;
+  }
 }

@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    background-color: var(--grey-900);
+    margin-bottom: 10vh;
+}
+.containerSkills{
+    display: flex;
+    flex-direction: row;
+    width: 80rem;
+    height: 90%;
+}
+.TextSkills{
+    width: 50%;
+    height: 100%;
+    padding: 2em;
+}
+.cardSkills{
+    width: 50%;
+    height: 100%;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+   h3{
+    font-size: 2.5em;
+    color: var(--white);
+   }
+   .point{
+    color: var(--pink);
+   }
+   .skillsText{
+    margin-top: 2em;
+    color: var(--grey);
+    font-size: 1.5em;
+   }
+}
+.html{
+    display: none;
+}
+
+@media (max-width: 1280px){
+
+    .containerSkills{
+        flex-direction: column;
+        width: 90%;
+    }
+    .TextSkills{
+        width: 100%;
+    }
+    .cardSkills{
+        width: 100%;
+    }
+}
