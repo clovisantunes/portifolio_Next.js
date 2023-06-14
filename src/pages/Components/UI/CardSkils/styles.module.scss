@@ -24,3 +24,10 @@
     color: var(--pink);
     border: 1px solid var(--pink);
 }
+@media(max-width: 760px){
+   
+    .button{
+        width: 3em;
+    height: 3em;
+    }
+}

@@ -1,87 +1,101 @@
-.container{
-    display: flex;
-    justify-content: center;
-    
-    width: 100%;
-    height: 100%;
+.container {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
 }
-.containerProjects{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 90%;
+.containerProjects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 90%;
 }
-.text{
-    font-size: 2.5em;
-    color: var(--white);
-    display: flex;
-    justify-content: center;
+.text {
+  font-size: 2.5em;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+  border-bottom: solid 2px var(--pink);
 }
-.butonContainer{
-    width: 100%;
-    height: 90vh;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    
+.butonContainer {
+  width: 100%;
+  height: 90vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
-.buttonCard{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    flex-wrap: wrap; 
-    width: 90%;
+.buttonCard {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 100%;
 }
 
-.imgCard{
-    width: 100%;
-    height: 65%;
-   z-index: 2;
+.imgCard {
+  width: 100%;
+  height: 65%;
+  z-index: 2;
+  
 }
-.imgCard:hover{
-    width: 120%;
-    height: 90%;
-    z-index: 4;
-}
-.cover{
+
+.cover {
+    bottom: 13%;
     background-color: var(--grey-700);
-    width: 120%;
-    height: 16em;
-    position: absolute;
-    z-index: 3;
-    padding: .5em;
+    width: 100%;
+    height: 4.5em;
+  position: absolute;
+  z-index: 1;
+  padding: 0.5em;
+  display: flex;
+  border-bottom: solid 2px var(--pink);
+  border-bottom-left-radius: 2vh;
+  border-bottom-right-radius: 2vh;
 }
-.miniIcons{
-    flex-direction: row;
-    display: flex;
+.cover.visible {
+  animation: fadeIn 0.8s ease;
+  
+}
+.miniIcons {
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  button{
+    position: absolute;
+    right: 0;
+  }
+ 
 }
 .projectTitle {
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
 
-    text-align: center;
-   
-    transition: all 0.3s ease-in-out;
-    position: absolute;
-    bottom: 0;
+}
 
+.projectTitle.visible {
+  z-index: 3;
+  animation: fadeIn 0.8s ease;
+  width:90%;
+}
+
+@keyframes fadeIn {
+  0% {
+    bottom: 50%;
   }
-  
-  .projectTitle.visible {
-    z-index: 3;
-    animation: fadeIn .8s ease;
-    
+  100% {
+    bottom: 13%;
   }
+}
 
-
-  @keyframes fadeIn {
-    0% {
-    
-      bottom: 50%;
-    }
-    100% {
-      bottom: 0%;
-    }
+@media (max-width: 1280px){
+  .miniIcons{
+    width: 10em;
   }
-    
+}

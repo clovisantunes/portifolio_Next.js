@@ -3,6 +3,13 @@ import Image from "next/image";
 import { CardProjects } from "../UI/CardProjects";
 import styles from "./styles.module.scss";
 import imgNetflix from "../../../../img/Mini_netflix_V2.png";
+import imgPokedex from '../../../../img/pokedex.png';
+import imgSpotify from '../../../../img/spotify.png';
+import imgPrime from '../../../../img/primeFlix.png';
+import imgGit from '../../../../img/gitfinder.png';
+import imgPizzaria from '../../../../img/pizzariaFront.png';
+import imgImob from '../../../../img/imobiliaria.png';
+
 import {
   FaHtml5,
   FaCss3Alt,
@@ -21,76 +28,74 @@ import {
 
 function Projects() {
   const projectsData = [
+      {
+        title: "Pizzaria",
+        icons: [
+          <FaCss3Alt />,
+          <FaHtml5 />,
+          <FaReact />,
+          <SiTypescript />,
+          <FaNodeJs />,
+        ],
+        img: imgPizzaria,
+        description: "Projeto FullStack de um sistema de pizzaria, feito todo o backend, frontend e o aplicativo mobile."
+      },
     {
-      title: "pizzaria",
+      title: "Imobiliaria",
       icons: [
         <FaCss3Alt />,
         <FaHtml5 />,
         <FaReact />,
-        <SiTypescript />,
-        <FaNodeJs />,
       ],
-      img: imgNetflix,
+      img: imgImob,
+      description: "Projeto de um site de imobiliaria imobiliaria"
     },
     {
-      title: "pizzaria",
+      title: "Git Finder",
       icons: [
         <FaCss3Alt />,
         <FaHtml5 />,
         <FaReact />,
         <SiTypescript />,
-        <FaNodeJs />,
       ],
-      img: imgNetflix,
+      img: imgGit,
+      description: "Estudo de consumo de api's utilizando TypeScript"
     },
     {
-      title: "pizzaria",
+      title: "PrimeFlix",
       icons: [
         <FaCss3Alt />,
         <FaHtml5 />,
-        <FaReact />,
-        <SiTypescript />,
-        <FaNodeJs />,
+        <FaReact />,      
       ],
-      img: imgNetflix,
+      img: imgPrime,
+      description: "Projeto de estudo do consumo de api's"
     },
     {
-      title: "pizzaria",
+      title: "Spotify Clone",
       icons: [
         <FaCss3Alt />,
         <FaHtml5 />,
-        <FaReact />,
-        <SiTypescript />,
-        <FaNodeJs />,
+        <FaReact />,     
       ],
-      img: imgNetflix,
+      img: imgSpotify,
+      description: "Clone do spotify"
     },
     {
-      title: "pizzaria",
+      title: "Pokedex",
       icons: [
         <FaCss3Alt />,
         <FaHtml5 />,
         <FaReact />,
-        <SiTypescript />,
-        <FaNodeJs />,
       ],
-      img: imgNetflix,
-    },
-    {
-      title: "pizzaria",
-      icons: [
-        <FaCss3Alt />,
-        <FaHtml5 />,
-        <FaReact />,
-        <SiTypescript />,
-        <FaNodeJs />,
-      ],
-      img: imgNetflix,
+      img: imgPokedex,
+      description: "Pokedex utilizando api do pokemon"
     },
     {
       title: "Clone Netflix",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgNetflix,
+      description: "Clone da netflix"
     },
   ];
 
@@ -118,19 +123,24 @@ function Projects() {
                   onMouseLeave={handleMouseLeave}
                 >
                   <Image
-                    src={imgNetflix}
-                    alt="Netflix Clone"
+                    src={project.img}
+                    alt={project.description}
                     className={styles.imgCard}
                   />
                   {activeIndex === index && (
-                    <div className={styles.cover}>
+                    <div className={`${styles.cover} ${
+                        activeIndex === index ? styles.visible : ""
+                    }`}>
                         <a
                         className={`${styles.projectTitle} ${
                             activeIndex === index ? styles.visible : ""
                         }`}
                         >
                         {project.title}
-                        <div className={styles.miniIcons}>{project.icons}</div>
+                        <div className={styles.miniIcons}>{project.icons}
+                        
+                            <button>Ver mais</button>
+                        </div>
                         </a>
                     </div>
                   )}
