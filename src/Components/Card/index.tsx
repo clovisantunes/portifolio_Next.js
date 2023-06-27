@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import imgText from "../../../img/IMG.png";
+import imgText from "../../img/IMG.png";
 import { ButtonLinks } from "../UI/ButtonLinks";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import Aos from "aos";
