@@ -12,7 +12,8 @@ import imgGit from "../../../../img/gitfinder.png";
 import imgPizzaria from "../../../../img/pizzariaFront.png";
 import imgImob from "../../../../img/imobiliaria.png";
 import imgRoute from "../../../../img/img16.png";
-
+import Modal from 'react-modal';
+import ModalProject from "../ModalProject";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -29,11 +30,10 @@ import {
   SiGithub,
 } from "react-icons/si";
 
-const  Projects =() => {
-
-  useEffect(() =>{
-    Aos.init({duration: 2000});
-  },[])
+const Projects = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   const projectsData = [
     {
@@ -46,6 +46,7 @@ const  Projects =() => {
         <SiTypescript />,
         <SiNextdotjs />,
       ],
+      link: 'https://github.com/clovisantunes/easy_route',
       img: imgRoute,
       description:
         "Aplicativo de controle de rotas, utilizando api de deslocamento e api do googleMaps, o projeto contem opção de cadastro de usuario e de condutor. Cadastrar automaveis, e rotas e opção de excluir.",
@@ -61,65 +62,62 @@ const  Projects =() => {
         <SiNextdotjs />,
       ],
       img: imgPizzaria,
+      link: 'https://github.com/clovisantunes/projetoPizza',
       description:
         "Projeto FullStack de um sistema de pizzaria, feito todo o backend, frontend e o aplicativo mobile.",
     },
     {
       title: "Imobiliaria",
-      icons: [<FaCss3Alt />,
-       <FaHtml5 />,
-       <FaReact />],
+      icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgImob,
+      link: 'https://github.com/clovisantunes/-real-estate',
       description: "Projeto de um site de imobiliaria imobiliaria",
     },
     {
       title: "Git Finder",
-      icons: [<FaCss3Alt />,
+      icons: [
+        <FaCss3Alt />,
         <FaHtml5 />,
-        <FaReact />, 
-        <SiTypescript />],
+        <FaReact />,
+        <SiTypescript />,
+      ],
       img: imgGit,
+      link: 'https://github.com/clovisantunes/github_finder',
       description: "Estudo de consumo de api's utilizando TypeScript",
     },
     {
       title: "PrimeFlix",
-      icons: [
-       <FaCss3Alt />,
-       <FaHtml5 />,
-       <FaReact />],
+      icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgPrime,
+      link: 'https://github.com/clovisantunes/prime_flix',
       description: "Projeto de estudo do consumo de api's",
     },
     {
       title: "Spotify Clone",
-      icons: [
-      <FaCss3Alt />,
-      <FaHtml5 />, 
-      <FaReact />],
+      icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgSpotify,
+      link: 'https://github.com/clovisantunes/spotify_clone',
       description: "Clone do spotify",
     },
     {
       title: "Pokedex",
-      icons: [
-      <FaCss3Alt />, 
-      <FaHtml5 />, 
-      <FaReact />],
+      icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgPokedex,
+      link: 'https://github.com/clovisantunes/pokedex',
       description: "Pokedex utilizando api do pokemon",
     },
     {
       title: "Clone Netflix",
-      icons: [
-      <FaCss3Alt />, 
-      <FaHtml5 />, 
-      <FaReact />],
+      icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgNetflix,
+      link: 'https://github.com/clovisantunes/netflix_clone',
       description: "Clone da netflix",
     },
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
     setActiveIndex(index);
@@ -129,11 +127,17 @@ const  Projects =() => {
     setActiveIndex(null);
   };
 
+  const handleOpenModalView = (index) => {
+    setSelectedIndex(projectsData[index]);
+    setModalVisible(true);
+  };
+  Modal.setAppElement("#__next");
+
   return (
     <div className={styles.container} data-aos="fade-up">
       <div className={styles.containerProjects}>
-        <div className={styles.text}>Todos Projetos</div>
-        <div className={styles.butonContainer}>
+        <div className={styles.text}>Todos os Projetos</div>
+        <div className={styles.buttonContainer}>
           <div className={styles.buttonCard}>
             {projectsData.map((project, index) => (
               <React.Fragment key={index}>
@@ -141,6 +145,7 @@ const  Projects =() => {
                   type="submit"
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
+                  onClick={() => handleOpenModalView(index)}
                 >
                   <Image
                     src={project.img}
@@ -172,8 +177,15 @@ const  Projects =() => {
           </div>
         </div>
       </div>
+      {modalVisible && (
+        <ModalProject
+          isOpen={modalVisible}
+          onRequestClose={() => setModalVisible(false)}
+          selectedIndex={selectedIndex}
+        />
+      )}
     </div>
   );
-}
+};
 
 export default Projects;
