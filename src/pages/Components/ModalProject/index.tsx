@@ -26,11 +26,13 @@ export default function ModalProject({
     content: {
       top: "15%",
       bottom: "auto",
-      left: "20%",
+      left: "15%",
       right: "auto",
       padding: "30px",
       Transform: "translate(-50%, 50%)",
       backgroundColor: "#151515",
+      width: '70%',
+      height: '80%',
     },
   };
 
@@ -66,7 +68,9 @@ export default function ModalProject({
               <Image src={img} alt={title} />
             </div>
             <div className={styles.modalInformation}>
+              <div className={styles.iconsContainer}>
               <div className={styles.icon}>{icons}</div>
+              </div>
               <div>
                 <span>{description}</span>
               </div>

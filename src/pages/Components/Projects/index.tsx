@@ -71,7 +71,7 @@ const Projects = () => {
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgImob,
       link: 'https://github.com/clovisantunes/-real-estate',
-      description: "Projeto de um site de imobiliaria imobiliaria",
+      description: "Projeto de um site de imobiliaria",
     },
     {
       title: "Git Finder",

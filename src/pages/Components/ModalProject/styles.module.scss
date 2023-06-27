@@ -1,8 +1,7 @@
 .modalContainer {
-  width: 70em;
-  height: 70vh;
-
-  
+  width: 100%;
+  height: 80%;
+  overflow: auto;
   .modalItem {
     display: flex;
     flex-direction: column;
@@ -35,20 +34,27 @@
       .modalInformation {
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 100%;
         padding: 3%;
-        .icon {
+        flex-wrap: wrap;
+        .iconsContainer {
           width: 100%;
-          height: 4em;
-          svg{
-            width: 3em;
-            height: 4em;
-            margin: 0 .5em;
-            color: var(--pink);
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          .icon {
+            width: 100%;
+            height: 100%;
+            svg {
+              width: 3em;
+              height: 100%;
+              margin: 0 .5em;
+              color: var(--pink);
+            }
           }
         }
       }
-      span{
+      span {
         font-family: sans-serif;
         font-weight: 800;
         font-size: 1.5em;
@@ -57,8 +63,37 @@
     }
   }
 }
-.buttons{
-    display: flex;
-    justify-content: space-between;
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .modalContainer {
     width: 100%;
+    .modalDescription {
+      font-size: 70%;
+    }
   }
+}
+
+@media (max-width: 480px) {
+  .modalContainer {
+    .modalInformation {
+      height: 50%;
+      gap: 40px;
+      .iconsContainer {
+        .icon {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 3px;
+          svg {
+            margin: 1em .5em;
+          }
+        }
+      }
+    }
+  }
+}
