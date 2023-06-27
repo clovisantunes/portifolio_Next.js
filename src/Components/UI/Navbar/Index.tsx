@@ -2,7 +2,7 @@ import Image from "next/image";
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import styles from "./styles.module.scss";
-import logoImg from "../../../../../img/logo.png";
+import logoImg from "../../../../img/logo.png";
 import { useEffect } from "react";
 
 

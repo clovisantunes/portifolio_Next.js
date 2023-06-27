@@ -1,13 +1,18 @@
 {
   "name": "portifolio",
+  "homepage": "https://clovisantunes.github.io/portifolio_Next.js",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
+  "export": "next export",
+  
   "dependencies": {
     "aos": "^2.3.4",
     "next": "13.4.4",
@@ -21,6 +26,7 @@
     "@types/node": "^20.3.0",
     "@types/react": "^18.2.11",
     "@types/react-modal": "^3.16.0",
+    "gh-pages": "^5.0.0",
     "typescript": "^5.1.3"
   }
 }

@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { Button } from "../UI/Button/index";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import imgMain from "../../../../img/logoIMg.png";
+import imgMain from "../../../img/logoIMg.png";
 import Image from "next/image";
 
 const curriculum =

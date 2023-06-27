@@ -1,11 +1,11 @@
 import Head from "next/head";
 import styles from "../../styles/home.module.scss";
-import Navbar from "./Components/UI/Navbar/Index";
-import Main from "../pages/Components/Main/Index";
-import { Skills } from "./Components/Skils";
-import CardProfile from "./Components/Card";
-import Projects  from "./Components/Projects";
-import Footer from "./Components/UI/Footer";
+import Navbar from "../Components/UI/Navbar/Index";
+import Main from "../Components/Main/Index";
+import { Skills } from "../Components/Skils";
+import CardProfile from "../Components/Card";
+import Projects  from "../Components/Projects";
+import Footer from "../Components/UI/Footer";
 
 
 export default function Home() {
