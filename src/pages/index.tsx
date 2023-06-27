@@ -5,6 +5,7 @@ import Main from "../pages/Components/Main/Index";
 import { Skills } from "./Components/Skils";
 import CardProfile from "./Components/Card";
 import Projects  from "./Components/Projects";
+import Footer from "./Components/UI/Footer";
 
 
 export default function Home() {
@@ -29,6 +30,9 @@ export default function Home() {
         </div>
         <div id="Projects">
           <Projects />
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     </>
