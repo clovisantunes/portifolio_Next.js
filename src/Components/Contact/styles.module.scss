@@ -61,7 +61,7 @@
     @media (max-width: 760px) {
       .cardItems {
         flex-wrap: wrap;
-  
+        width: auto;
         .contactCard {
           width: 45%;
           margin: 1em 0;
