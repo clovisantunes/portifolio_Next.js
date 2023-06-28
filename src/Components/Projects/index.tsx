@@ -64,14 +64,14 @@ const Projects = () => {
       img: imgPizzaria,
       link: 'https://github.com/clovisantunes/projetoPizza',
       description:
-        "Projeto FullStack de um sistema de pizzaria, feito todo o backend, frontend e o aplicativo mobile.",
+        "Projeto FullStack de um sistema de pizzaria, feito todo o backend, frontend e o aplicativo mobile. O projeto contem no back-end opção de excluir, adicionar, criar usuarios e pedidos, realizando o cadastramento de produtos com imagens e categorias. No front end contem a opção de logar o usuario e registar. Alem de visualizar os pedidos e concluir os atendimentos. No mobile contem a opção de criar pedidos e enviar para realizar o atendimento. ",
     },
     {
       title: "Imobiliaria",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgImob,
       link: 'https://github.com/clovisantunes/-real-estate',
-      description: "Projeto de um site de imobiliaria",
+      description: "Projeto de uma landing page de um site de imobiliaria. Foi criado este projeto com objetivo de treinamento e estudo.",
     },
     {
       title: "Git Finder",
@@ -83,7 +83,7 @@ const Projects = () => {
       ],
       img: imgGit,
       link: 'https://github.com/clovisantunes/github_finder',
-      description: "Estudo de consumo de api's utilizando TypeScript",
+      description: "Estudo de consumo de api's utilizando TypeScript. Foi utilizado a api do github para realizar a buscar dos usuarios, e foi criado com objetivo de estudar typeScript.",
     },
     {
       title: "PrimeFlix",
@@ -97,21 +97,21 @@ const Projects = () => {
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgSpotify,
       link: 'https://github.com/clovisantunes/spotify_clone',
-      description: "Clone do spotify",
+      description: "Clone do spotify, feito para estudar o consumo de api.",
     },
     {
       title: "Pokedex",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgPokedex,
       link: 'https://github.com/clovisantunes/pokedex',
-      description: "Pokedex utilizando api do pokemon",
+      description: "Pokedex utilizando api do pokemon.",
     },
     {
       title: "Clone Netflix",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgNetflix,
       link: 'https://github.com/clovisantunes/netflix_clone',
-      description: "Clone da netflix",
+      description: "Clone da netflix, criada para estudar o consumo de api. e o carregamento de varias informações.",
     },
   ];
 
