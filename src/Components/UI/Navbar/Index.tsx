@@ -6,13 +6,17 @@ import logoImg from "../../../img/logo.png";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [navOpen, setnavOpen ] =useState(false);
+  const [navOpen, setNavOpen] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
-    setnavOpen(!navOpen);
+    setNavOpen(!navOpen);
   };
 
+  const closeMenu = () => {
+    setShowMenu(false);
+    setNavOpen(false);
+  };
 
   return (
     <>
@@ -28,23 +32,31 @@ const Navbar = () => {
             {!showMenu && <FiMenu />}
             {showMenu && <FiX />}
           </button>
-          <ul
-            className={`${styles.items} ${showMenu ? styles.showMenu : ""}`}
-          >
+          <ul className={`${styles.items} ${showMenu ? styles.showMenu : ""}`}>
             <li className={styles.li}>
-              <a href="#main">Inicio</a>
+              <a href="#main" onClick={closeMenu}>
+                Inicio
+              </a>
             </li>
             <li className={styles.li}>
-              <a href="#cardProfile">Sobre</a>
+              <a href="#cardProfile" onClick={closeMenu}>
+                Sobre
+              </a>
             </li>
             <li className={styles.li}>
-              <a href="#skills">Conhecimentos</a>
+              <a href="#skills" onClick={closeMenu}>
+                Conhecimentos
+              </a>
             </li>
             <li className={styles.li}>
-              <a href="#Projects">Projetos</a>
+              <a href="#Projects" onClick={closeMenu}>
+                Projetos
+              </a>
             </li>
             <li className={styles.li}>
-              <a href="#Contact">Contato</a>
+              <a href="#Contact" onClick={closeMenu}>
+                Contato
+              </a>
             </li>
           </ul>
         </nav>
