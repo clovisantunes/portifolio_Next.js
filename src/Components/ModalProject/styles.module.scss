@@ -104,9 +104,17 @@
           display: flex;
       
           svg {
+            width: 1em;
+            height: 1em;
             margin: 1em .5em;
           }
         }
+      }
+    }
+    .iconsContainer{
+      svg{
+        width: 1.5em;
+        height: 1.5em;
       }
     }
   }
