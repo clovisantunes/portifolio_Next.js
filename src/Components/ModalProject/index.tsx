@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 import { FiX } from "react-icons/fi";
 import Image, { StaticImageData } from "next/image";
 import { Button } from "../UI/Button";
-
+import { AiFillGithub} from "react-icons/ai";
 interface ModalProjectProps {
   isOpen: boolean;
   onRequestClose: () => void;
@@ -45,8 +45,8 @@ export default function ModalProject({
   return (
     <Modal isOpen={isOpen} onRequestClose={onRequestClose} style={customStyles}>
       <div className={styles.buttons}>
-      <Button type="button">
-          <a href={link} target="__blank">Repositorio</a>
+      <Button type="button" className={styles.button}>
+          <a href={link} target="__blank"><AiFillGithub/></a>
         </Button>
         <button
           type="button"
