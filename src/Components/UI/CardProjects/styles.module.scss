@@ -34,8 +34,10 @@
             animation: colorOn 2s ease forwards;
         }
     }
-    
-
+}
+.button:hover{
+    transform: scale(1.1);
+    z-index: 2;
 }
 @keyframes colorOn{
     50%{
