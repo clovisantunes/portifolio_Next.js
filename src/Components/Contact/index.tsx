@@ -7,7 +7,7 @@ const contactData = [
     {
         name: "Email",
         icon: <AiOutlineMail />,
-        text: "clovissantannaa@gamail.com",
+        text: "clovissantannaa@gmail.com",
         href: "mailto:clovissantannaa@gmail.com"
     },
     {

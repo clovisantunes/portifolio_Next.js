@@ -1,127 +1,123 @@
-.container{
-    width: 100%;
-    height: 8vh;
-    border-bottom: 2px solid var(--pink);
-    padding: 1.5vh;
-    position: fixed;
-    z-index: 5;
-    background-color: var(--background-color);
+.container {
+  width: 100%;
+  height: 8vh;
+  border-bottom: 2px solid var(--pink);
+  padding: 1.5vh;
+  position: fixed;
+  z-index: 5;
+  background-color: var(--background-color);
 }
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 25%;
-    height: 6vh;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 25%;
+  height: 6vh;
 }
-.logoImg{
-    max-width:200px;
-    max-height:80px;
+.logoImg {
+  max-width: 200px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  z-index: 1;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  color: var(--grey);
+}
+.items li {
+  list-style-type: none;
+  margin-left: 3vh;
+  background-image: linear-gradient(120deg, var(--white), var(--pink));
+  background-repeat: no-repeat;
+  background-size: 0 3px;
+  background-position: left bottom;
+  transition: background-size 500ms ease;
+  border-radius: 2vh;
+  font-size: 1.2em;
+}
+
+.li:hover {
+  color: var(--white);
+  background-size: 100% 3px;
+}
+.hamburgerButton {
+  display: none;
+}
+@media (max-width: 1280px) {
+  .logoImg {
+    max-width: 100px;
+    max-height: 80px;
     width: auto;
     height: auto;
+  }
+  .navbar {
+    margin: 0;
+  }
+
+  .items li {
+    margin: 0 1vh 0 1.85vh;
+  }
+}
+@media (max-width: 760px) {
+  .navOpen {
+    height: 120vh;
+    background-color: var(--grey);
+    justify-content: center;
+    transition: all .5s ease;
+  }
+  .hamburgerButton {
+    display: block;
+    background: none;
+    border: none;
     z-index: 1;
-}
+    position: absolute;
+    right: 15px;
+    top: 15px;
 
-.items{
-    display: flex;
-    flex-direction: row;
-    color: var(--grey);
-    
-}
-.items li{
-    list-style-type: none;
-    margin-left: 3vh;
-    background-image: linear-gradient(120deg,var(--white), var(--pink));
-    background-repeat: no-repeat;
-    background-size: 0 3px;
-    background-position:  left bottom;
-    transition: background-size 500ms ease;
-    border-radius: 2vh;
-    font-size: 1.2em;
-}
+    svg {
+      color: var(--pink);
+      width: 2em;
+      height: 2em;
+    }
+  }
+  .navbar {
+    margin: 0;
+  }
 
-.li:hover{
-    color: var(--white);
-    background-size: 100% 3px;
-}
-.hamburgerButton{
+  .logoImg {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+  }
+  .items {
     display: none;
-}
-@media (max-width: 1280px){
-    .logoImg{
-        max-width:100px;
-        max-height:80px;
-        width: auto;
-        height: auto;
-    }
-    .navbar{
-        margin: 0;
-    }
+  }
+
+  .showMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    position: absolute;
+    height: 120vh;
+    width: 100%;
+    background: var(--background-card);
    
-    .items li{
-        margin:0 1vh 0 1.85vh;
+
+    ul {
+      height: 100%;
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
-  @media (max-width: 760px){
-    .navOpen{
-        height: 120vh;
-        background-color: var(--grey);
-        justify-content: center;
-    }
-    .hamburgerButton{
-        display: block;
-        background: none;
-        border: none;
-        z-index: 1;
-        position: absolute;
-        right: 15px;
-        top: 15px;
-
-        svg{
-            color: var(--pink);
-            width: 2em;
-            height: 2em;
-        }
-    }
-    .navbar{
-        margin: 0;
-    }
-    
+  .items li {
+    font-size: 2.5em;
+    margin: 0.8em 0;
   }
-  @media (max-width: 760px) {
-    .logoImg{
-        position: absolute;
-        left: 10px;
-        top: 15px;
-    }
-    .items {
-      display: none;
-    }
-  
-    .showMenu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        position: absolute;
-        height: 120vh;
-        width: 100%;
-        background: var(--background-card);
-
-    ul{
-        height: 100%;
-        width: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 }
-    .items li{
-        font-size: 2.5em;
-        margin: .8em 0;
-
-
-    }
-  }
-  
