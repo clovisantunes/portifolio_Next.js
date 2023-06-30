@@ -50,7 +50,7 @@ const Projects = () => {
       link: 'https://github.com/clovisantunes/rickandmorty',
       img: imgRick,
       description:
-        "Landing page consumindo a api do Rick and Morty. Projeto ainda esta em desenvolviment, por enquanto contem somente a sessão de carregar personagens mas tera varias outras funções futuramente.",
+        "Landing page consumindo a api do Rick and Morty. Projeto ainda esta em desenvolvimento, por enquanto contem somente a sessão de carregar personagens mas tera varias outras funções futuramente.",
     },
     {
       title: "Easy Route",
