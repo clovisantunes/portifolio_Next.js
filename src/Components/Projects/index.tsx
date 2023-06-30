@@ -14,6 +14,7 @@ import imgImob from "../../img/imobiliaria.png";
 import imgRoute from "../../img/img16.png";
 import Modal from 'react-modal';
 import ModalProject from "../ModalProject";
+import imgRick from '../../img/rickandmorty.png'
 import {
   FaHtml5,
   FaCss3Alt,
@@ -36,6 +37,21 @@ const Projects = () => {
   }, []);
 
   const projectsData = [
+    {
+      title: "Rick And Mory",
+      icons: [
+        <FaCss3Alt />,
+        <FaHtml5 />,
+        <FaReact />,
+        <FaSass />,
+        <SiTypescript />,
+        <SiNextdotjs />,
+      ],
+      link: 'https://github.com/clovisantunes/rickandmorty',
+      img: imgRick,
+      description:
+        "Landing page consumindo a api do Rick and Morty. Projeto ainda esta em desenvolviment, por enquanto contem somente a sessão de carregar personagens mas tera varias outras funções futuramente.",
+    },
     {
       title: "Easy Route",
       icons: [
