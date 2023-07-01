@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 import { FiX } from "react-icons/fi";
 import Image, { StaticImageData } from "next/image";
 import { Button } from "../UI/Button";
-import { AiFillGithub} from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 interface ModalProjectProps {
   isOpen: boolean;
   onRequestClose: () => void;
@@ -13,6 +13,7 @@ interface ModalProjectProps {
     icons: JSX.Element[];
     img: StaticImageData;
     link: string;
+    deploy: string;
     description: string;
   } | null;
 }
@@ -31,8 +32,8 @@ export default function ModalProject({
       padding: "30px",
       Transform: "translate(-50%, 50%)",
       backgroundColor: "#151515",
-      width: '70%',
-      height: '80%',
+      width: "70%",
+      height: "80%",
     },
   };
 
@@ -40,14 +41,17 @@ export default function ModalProject({
     return null;
   }
 
-  const { title, icons, img, link, description } = selectedIndex;
+  const { title, icons, img, link, description, deploy } = selectedIndex;
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onRequestClose} style={customStyles}>
       <div className={styles.buttons}>
-      <Button type="button" className={styles.button}>
-          <a href={link} target="__blank"><AiFillGithub/></a>
+        <Button type="button" className={styles.button}>
+          <a href={link} target="__blank">
+            <AiFillGithub />
+          </a>
         </Button>
+
         <button
           type="button"
           onClick={onRequestClose}
@@ -56,7 +60,6 @@ export default function ModalProject({
         >
           <FiX size={25} color="9d4ae6" />
         </button>
-       
       </div>
       <div className={styles.modalContainer}>
         <div className={styles.modalItem}>
@@ -69,11 +72,16 @@ export default function ModalProject({
             </div>
             <div className={styles.modalInformation}>
               <div className={styles.iconsContainer}>
-              <div className={styles.icon}>{icons}</div>
+                <div className={styles.icon}>{icons}</div>
               </div>
               <div>
                 <span>{description}</span>
               </div>
+              <Button type="button">
+                <a href={deploy} target="__blank">
+                  Acesssar
+                </a>
+              </Button>
             </div>
           </div>
         </div>

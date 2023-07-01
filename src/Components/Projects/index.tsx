@@ -48,6 +48,7 @@ const Projects = () => {
         <SiNextdotjs />,
       ],
       link: 'https://github.com/clovisantunes/rickandmorty',
+      deploy:"https://rickandmorty-ten-henna.vercel.app/",
       img: imgRick,
       description:
         "Landing page consumindo a api do Rick and Morty. Projeto ainda esta em desenvolvimento, por enquanto contem somente a sessão de carregar personagens mas tera varias outras funções futuramente.",
