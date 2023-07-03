@@ -79,7 +79,7 @@ export default function ModalProject({
               </div>
               <Button type="button">
                 <a href={deploy} target="__blank">
-                  Acesssar
+                  Acessar
                 </a>
               </Button>
             </div>
