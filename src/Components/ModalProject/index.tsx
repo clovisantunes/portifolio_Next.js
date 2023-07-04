@@ -77,11 +77,14 @@ export default function ModalProject({
               <div>
                 <span>{description}</span>
               </div>
+              {deploy && (
               <Button type="button">
                 <a href={deploy} target="__blank">
                   Acessar
                 </a>
               </Button>
+              )}
+
             </div>
           </div>
         </div>
