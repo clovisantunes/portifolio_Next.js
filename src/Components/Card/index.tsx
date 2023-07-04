@@ -7,9 +7,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-
 const CardProfile = () => {
-
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -36,16 +34,23 @@ const CardProfile = () => {
           </div>
           <div className={styles.text}>
             <span>
-              Sou um desenvolvedor Front-End com experiencia em next.js React.js, node.js e no consumo de api. Minha sessão de projetos contem alguns
-              dos sites que ja criei. Atualmente estou aberto a oportunidades de
-              trabalho, onde posso contribuir com a equipe estando sempre
-              disposto a melhorar e aprender mais.
+              Sou um desenvolvedor com experiência em construir sistemas
+              interativos e acessíveis. Meu portfólio inclui diversos projetos
+              que demonstrem minha capacidade de criar soluções inovadoras.
+              Estou atualmente em busca de novas oportunidades de trabalho, onde
+              posso contribuir com conhecimentos em front-end e back-end, além
+              de habilidades em consumo de API. Sou comprometido em estar sempre
+              aprendendo e aprimorando minhas habilidades para acompanhar as
+              demandas em constante evolução do setor de desenvolvimento
             </span>
           </div>
 
           <div className={styles.buttonsItems}>
             <ButtonLinks>
-              <a href="https://www.linkedin.com/in/clovis-antunes/"  target="_blank">
+              <a
+                href="https://www.linkedin.com/in/clovis-antunes/"
+                target="_blank"
+              >
                 <FaLinkedinIn />
               </a>
             </ButtonLinks>
@@ -59,5 +64,5 @@ const CardProfile = () => {
       </div>
     </div>
   );
-}
+};
 export default CardProfile;
