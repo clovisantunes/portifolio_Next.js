@@ -30,7 +30,7 @@ const CardProfile = () => {
             <span>Clovis Antunes</span>
           </div>
           <div className={styles.developer}>
-            <span>Frontend Developer & Mobile</span>
+            <span>Frontend Developer</span>
           </div>
           <div className={styles.text}>
             <span>
