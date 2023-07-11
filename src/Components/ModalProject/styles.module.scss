@@ -34,6 +34,27 @@
           max-width: auto;
           max-height: auto;
         }
+        .buttonsContainer{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 57.5%;
+          position: absolute;
+          top: 37%;
+          .buttonArrows{
+            width: 5%;
+            height: 2.5em;
+            background: var(--grey);
+            color: var(--white);
+            opacity: .7;
+            border: none;
+            border-radius: .2em;
+            transition: all .5s ease;
+          }
+          .buttonArrows:hover{
+            opacity: 1;
+          }
+        }
       }
       .modalInformation {
         display: flex;
