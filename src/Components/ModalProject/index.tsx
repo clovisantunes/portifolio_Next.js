@@ -45,14 +45,7 @@ export default function ModalProject({
   }
 
   const { title, icons, img, link, description, deploy } = selectedIndex;
-  const buttons = [
-    {
-      icon: <SlArrowLeft />,
-  },
-  {
-    icon: <SlArrowRight />,
-  }
-  ] ;
+  
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onRequestClose} style={customStyles}>
@@ -80,11 +73,6 @@ export default function ModalProject({
           <div className={styles.modalDescription}>
             <div className={styles.image}>
               <Image src={img} alt={title} />
-              <div className={styles.buttonsContainer}>
-                {buttons.map((button) =>(
-                  <Button className={styles.buttonArrows}>{button.icon}</Button>
-                ))}
-              </div>
             </div>
             <div className={styles.modalInformation}>
               <div className={styles.iconsContainer}>
