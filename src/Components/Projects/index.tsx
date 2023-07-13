@@ -38,6 +38,7 @@ const Projects = () => {
 
   const projectsData = [
     {
+      id:1,
       title: "Rick And Mory",
       icons: [
         <FaCss3Alt />,
@@ -54,6 +55,7 @@ const Projects = () => {
         "Landing page consumindo a api do Rick and Morty. Projeto ainda esta em desenvolvimento, por enquanto contem somente a sessão de carregar personagens mas tera varias outras funções futuramente.",
     },
     {
+      id:2,
       title: "Easy Route",
       icons: [
         <FaCss3Alt />,
@@ -69,6 +71,7 @@ const Projects = () => {
         "Aplicativo de controle de rotas, utilizando api de deslocamento e api do googleMaps, o projeto contem opção de cadastro de usuario e de condutor. Cadastrar automaveis, e rotas e opção de excluir.",
     },
     {
+      id:2,
       title: "Pizzaria",
       icons: [
         <FaCss3Alt />,
@@ -84,6 +87,7 @@ const Projects = () => {
         "Projeto FullStack de um sistema de pizzaria, feito todo o backend, frontend e o aplicativo mobile. O projeto contem no back-end opção de excluir, adicionar, criar usuarios e pedidos, realizando o cadastramento de produtos com imagens e categorias. No front end contem a opção de logar o usuario e registar. Alem de visualizar os pedidos e concluir os atendimentos. No mobile contem a opção de criar pedidos e enviar para realizar o atendimento. ",
     },
     {
+      id:3,
       title: "Imobiliaria",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgImob,
@@ -91,6 +95,7 @@ const Projects = () => {
       description: "Projeto de uma landing page de um site de imobiliaria. Foi criado este projeto com objetivo de treinamento e estudo.",
     },
     {
+      id:4,
       title: "Git Finder",
       icons: [
         <FaCss3Alt />,
@@ -103,6 +108,7 @@ const Projects = () => {
       description: "Estudo de consumo de api's utilizando TypeScript. Foi utilizado a api do github para realizar a buscar dos usuarios, e foi criado com objetivo de estudar typeScript.",
     },
     {
+      id:5,
       title: "PrimeFlix",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgPrime,
@@ -110,6 +116,7 @@ const Projects = () => {
       description: "Projeto de estudo do consumo de api's",
     },
     {
+      id:6,
       title: "Spotify Clone",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgSpotify,
@@ -117,6 +124,7 @@ const Projects = () => {
       description: "Clone do spotify, feito para estudar o consumo de api.",
     },
     {
+      id:7,
       title: "Pokedex",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgPokedex,
@@ -124,6 +132,7 @@ const Projects = () => {
       description: "Pokedex utilizando api do pokemon.",
     },
     {
+      id:8,
       title: "Clone Netflix",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgNetflix,
@@ -159,6 +168,7 @@ const Projects = () => {
             {projectsData.map((project, index) => (
               <React.Fragment key={index}>
                 <CardProjects
+                key={project.id}
                   type="submit"
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
