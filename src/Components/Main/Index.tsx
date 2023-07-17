@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from 'next-i18next';
 import styles from "./styles.module.scss";
 import { Button } from "../UI/Button/index";
 import Aos from "aos";
@@ -14,13 +15,16 @@ const Main = () => {
     Aos.init({ duration: 2000 });
   }, []);
 
+  
+  const { t } = useTranslation();
+
   return (
     <div className={styles.containerMain}>
       <div className={styles.containerItems}>
         <div className={styles.intro} >
-          <h2 data-aos="fade-down">Olá sou o</h2>
+          <h2 data-aos="fade-down">{t('apresentation')}</h2>
           <h1 data-aos="fade-left">Clovis Antunes</h1>
-          <p data-aos="fade-right">Frontend Developer & Mobile</p>
+          <p data-aos="fade-right">Front-end Developer</p>
         </div>
         <div className={styles.buttonContainer}>
           <Button type="submit">

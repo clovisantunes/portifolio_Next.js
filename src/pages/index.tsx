@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { useTranslation } from "next-i18next"; 
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import styles from "../../styles/home.module.scss";
 import Navbar from "../Components/UI/Navbar/Index";
 import Main from "../Components/Main/Index";
@@ -10,6 +12,7 @@ import Contact from "../Components/Contact";
 
 
 export default function Home() {
+  const { t } = useTranslation("common");
   return (
     <>
       <Head>
@@ -41,4 +44,11 @@ export default function Home() {
       </div>
     </>
   );
+}
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }

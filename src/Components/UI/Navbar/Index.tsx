@@ -3,11 +3,12 @@ import Image from "next/image";
 import { FiMenu, FiX } from "react-icons/fi";
 import styles from "./styles.module.scss";
 import logoImg from "../../../img/logo.png";
+import { useTranslation } from 'next-i18next';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
-
+  const { t } = useTranslation();
   const toggleMenu = () => {
     setShowMenu(!showMenu);
     setNavOpen(!navOpen);
@@ -35,27 +36,27 @@ const Navbar = () => {
           <ul className={`${styles.items} ${showMenu ? styles.showMenu : ""}`}>
             <li className={styles.li}>
               <a href="#main" onClick={closeMenu}>
-                Inicio
+              {t('init')}
               </a>
             </li>
             <li className={styles.li}>
               <a href="#cardProfile" onClick={closeMenu}>
-                Sobre
+              {t('about')}
               </a>
             </li>
             <li className={styles.li}>
               <a href="#skills" onClick={closeMenu}>
-                Conhecimentos
+              {t('acquirements')}
               </a>
             </li>
             <li className={styles.li}>
               <a href="#Projects" onClick={closeMenu}>
-                Projetos
+              {t('project')}
               </a>
             </li>
             <li className={styles.li}>
               <a href="#Contact" onClick={closeMenu}>
-                Contato
+              {t('contact')}
               </a>
             </li>
           </ul>
