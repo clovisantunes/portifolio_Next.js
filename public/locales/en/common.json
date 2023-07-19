@@ -1,15 +1,33 @@
 {
-    "apresentation": "Hello, I am",
-    "init": "First",
-    "about": "About",
-    "acquirements": "Acquirements",
-    "project": "Project",
-    "contact": "Contact",
-    "aboutMe": "About me",
-    "text":"I am a developer with experience in building interactive and accessible systems. My portfolio includes various projects that demonstrate my ability to create innovative solutions. I am currently seeking new job opportunities where I can contribute with my knowledge in front-end and back-end development, as well as API consumption skills. I am committed to constantly learning and improving my skills to keep up with the ever-evolving demands of the development industry."
-
-
-
-
-
+  "apresentation": "Hello, I am",
+  "init": "First",
+  "about": "About",
+  "acquirements": "Acquirements",
+  "project": "Project",
+  "contact": "Contact",
+  "aboutMe": "About me",
+  "text": "I am a developer with experience in building interactive and accessible systems. My portfolio includes various projects that demonstrate my ability to create innovative solutions. I am currently seeking new job opportunities where I can contribute with my knowledge in front-end and back-end development, as well as API consumption skills. I am committed to constantly learning and improving my skills to keep up with the ever-evolving demands of the development industry.",
+  "skill": "Skills",
+  "skillCard": "*Mouse over card to read*",
+  "html": "HTML is a markup language used in building web pages. HTML documents can be interpreted by web browsers.",
+  "css": "Cascading Style Sheets is a mechanism for adding styles to a web page, applied directly to HTML tags or contained within <style> tags. It is also possible to add styles by linking to a CSS file that contains the styles.",
+  "react": "React is an open-source JavaScript front-end library that focuses on creating user interfaces on web pages.",
+  "sass": "Sass is a stylesheet language initially designed by Hampton Catlin and developed by Natalie Weizenbaum. After its initial versions, Weizenbaum and Chris Eppstein continued to extend Sass with SassScript, a simple scripting language used in Sass files.",
+  "nextjs": "Next.js is an open-source React front-end web development framework created by Vercel, which allows features such as server-side rendering and static website generation for React-based web applications.",
+  "typescript": "TypeScript is an open-source programming language developed by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language.",
+  "javascript": "JavaScript is a high-level interpreted, structured programming language with weak dynamic typing. Along with HTML and CSS, JavaScript is one of the three core technologies of the World Wide Web.",
+  "postgresql": "PostgreSQL is an object-relational database management system developed as an open-source project.",
+  "java": "Java is an object-oriented programming language developed in the 1990s.",
+  "nodejs": "Node.js is an open-source, cross-platform software based on the Google V8 engine that allows the execution of JavaScript code outside of a web browser. The main feature of Node.js is its asynchronous and event-driven architecture.",
+  "github": "GitHub is a source code and file hosting platform with version control using Git. It allows programmers, utilities, or any registered user on the platform to contribute to private and/or open-source projects from anywhere in the world.",
+  "project1": "Landing page consuming the Rick and Morty API. The project is still under development. For now, it only contains the character loading session, but it will have several other functions in the future.",
+  "project2": "Route control application using displacement API and Google Maps API. The project includes user and driver registration options. It allows registration of vehicles and routes, as well as an option to delete them.",
+  "project3": "Full-stack pizza restaurant system project, including backend, frontend, and mobile application. The backend features options to delete, add, create users and orders, allowing product registration with images and categories. The frontend includes user login and registration options, as well as order viewing and completion. The mobile application allows creating orders and sending them for processing.",
+  "project4": "Landing page project for a real estate website. This project was created for training and study purposes.",
+  "project5": "API consumption study using TypeScript. The GitHub API was used to fetch user data. This project was created to study TypeScript.",
+  "project6": "API consumption study project.",
+  "project7": "Spotify clone created to study API consumption.",
+  "project8": "Pokedex using the Pokemon API.",
+  "project9": "Netflix clone created to study API consumption and loading of various information.",
+  "copyright": "All rights reserved."
 }

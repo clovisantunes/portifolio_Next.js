@@ -30,11 +30,22 @@ import {
   SiPostgresql,
   SiGithub,
 } from "react-icons/si";
+import { useTranslation } from 'next-i18next';
 
 const Projects = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+  const { t } = useTranslation();
+  const rickAndMorty = t("project1");
+  const easyRoute = t("project2");
+  const Pizzaria = t("project3");
+  const Imobiliaria = t("project4");
+  const gitFinder = t("project5");
+  const primeFlix = t("project6");
+  const spotifyClone = t("project7");
+  const pokedex = t("project8");
+  const cloneNetlix = t("project9");
 
   const projectsData = [
     {
@@ -52,7 +63,7 @@ const Projects = () => {
       deploy:"https://rickandmorty-plumbus.vercel.app/",
       img: imgRick,
       description:
-        "Landing page consumindo a api do Rick and Morty. Projeto ainda esta em desenvolvimento, por enquanto contem somente a sessão de carregar personagens mas tera varias outras funções futuramente.",
+          rickAndMorty
     },
     {
       id:2,
@@ -68,10 +79,10 @@ const Projects = () => {
       link: 'https://github.com/clovisantunes/easy_route',
       img: imgRoute,
       description:
-        "Aplicativo de controle de rotas, utilizando api de deslocamento e api do googleMaps, o projeto contem opção de cadastro de usuario e de condutor. Cadastrar automaveis, e rotas e opção de excluir.",
+      easyRoute,
     },
     {
-      id:2,
+      id:3,
       title: "Pizzaria",
       icons: [
         <FaCss3Alt />,
@@ -84,18 +95,18 @@ const Projects = () => {
       img: imgPizzaria,
       link: 'https://github.com/clovisantunes/projetoPizza',
       description:
-        "Projeto FullStack de um sistema de pizzaria, feito todo o backend, frontend e o aplicativo mobile. O projeto contem no back-end opção de excluir, adicionar, criar usuarios e pedidos, realizando o cadastramento de produtos com imagens e categorias. No front end contem a opção de logar o usuario e registar. Alem de visualizar os pedidos e concluir os atendimentos. No mobile contem a opção de criar pedidos e enviar para realizar o atendimento. ",
+      Pizzaria,
     },
     {
-      id:3,
+      id:4,
       title: "Imobiliaria",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgImob,
       link: 'https://github.com/clovisantunes/-real-estate',
-      description: "Projeto de uma landing page de um site de imobiliaria. Foi criado este projeto com objetivo de treinamento e estudo.",
+      description: Imobiliaria,
     },
     {
-      id:4,
+      id:5,
       title: "Git Finder",
       icons: [
         <FaCss3Alt />,
@@ -105,39 +116,39 @@ const Projects = () => {
       ],
       img: imgGit,
       link: 'https://github.com/clovisantunes/github_finder',
-      description: "Estudo de consumo de api's utilizando TypeScript. Foi utilizado a api do github para realizar a buscar dos usuarios, e foi criado com objetivo de estudar typeScript.",
+      description: gitFinder,
     },
     {
-      id:5,
+      id:6,
       title: "PrimeFlix",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgPrime,
       link: 'https://github.com/clovisantunes/prime_flix',
-      description: "Projeto de estudo do consumo de api's",
+      description: primeFlix,
     },
     {
-      id:6,
+      id:7,
       title: "Spotify Clone",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgSpotify,
       link: 'https://github.com/clovisantunes/spotify_clone',
-      description: "Clone do spotify, feito para estudar o consumo de api.",
+      description: spotifyClone,
     },
     {
-      id:7,
+      id:8,
       title: "Pokedex",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgPokedex,
       link: 'https://github.com/clovisantunes/pokedex',
-      description: "Pokedex utilizando api do pokemon.",
+      description: pokedex,
     },
     {
-      id:8,
+      id:9,
       title: "Clone Netflix",
       icons: [<FaCss3Alt />, <FaHtml5 />, <FaReact />],
       img: imgNetflix,
       link: 'https://github.com/clovisantunes/netflix_clone',
-      description: "Clone da netflix, criada para estudar o consumo de api. e o carregamento de varias informações.",
+      description: cloneNetlix,
     },
   ];
 

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useTranslation } from "next-i18next"; 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import styles from "../../styles/home.module.scss";
+
 import Navbar from "../Components/UI/Navbar/Index";
 import Main from "../Components/Main/Index";
 import { Skills } from "../Components/Skils";
@@ -19,7 +19,7 @@ export default function Home() {
         <title>Clovis Antunes || Portifolio</title>
         <link rel="shortcut icon" href='/favicon.ico'/>
       </Head>
-      <div className={styles.containerCenter}>
+      <div>
         <div>
           <Navbar />
         </div>
