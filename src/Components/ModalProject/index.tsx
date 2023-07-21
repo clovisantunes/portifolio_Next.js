@@ -6,7 +6,7 @@ import Image, { StaticImageData } from "next/image";
 import { Button } from "../UI/Button";
 import { AiFillGithub } from "react-icons/ai";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
-
+import { useTranslation } from 'next-i18next';
 
 interface ModalProjectProps {
   isOpen: boolean;
@@ -45,7 +45,7 @@ export default function ModalProject({
   }
 
   const { title, icons, img, link, description, deploy } = selectedIndex;
-  
+  const { t } = useTranslation();
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onRequestClose} style={customStyles}>
@@ -84,7 +84,7 @@ export default function ModalProject({
               {deploy && (
               <Button type="button">
                 <a href={deploy} target="__blank">
-                  Acessar
+                {t('acess')}
                 </a>
               </Button>
               )}
