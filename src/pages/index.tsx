@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { useTranslation } from "next-i18next"; 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
-import Navbar from "../Components/UI/Navbar/Index";
+import styles from "../styles/home.module.scss";
+import Navbar from "../Components/Navbar/Index";
 import Main from "../Components/Main/Index";
 import { Skills } from "../Components/Skils";
 import CardProfile from "../Components/Card";
@@ -20,10 +20,10 @@ export default function Home() {
         <link rel="shortcut icon" href='/favicon.ico'/>
       </Head>
       <div>
-        <div>
+        <div className={styles.navContainer}>
           <Navbar />
         </div>
-        <div id="main">
+        <div id="main" className={styles.mainContainer}>
           <Main />
         </div>
         <div id="cardProfile">

@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 import { Button } from "../UI/Button/index";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import imgMain from "../../img/logoIMg.png";
+import imgMain from "../../img/profile.png";
 import Image from "next/image";
 
 const curriculum =
@@ -22,9 +22,11 @@ const Main = () => {
     <div className={styles.containerMain}>
       <div className={styles.containerItems}>
         <div className={styles.intro} >
-          <h2 data-aos="fade-down">{t('apresentation')}</h2>
-          <h1 data-aos="fade-left">Clovis Antunes</h1>
-          <p data-aos="fade-right">Front-end Developer</p>
+          <div className={styles.text}>
+          <h2 data-aos="fade-down">{t('apresentation')}</h2> <span className={styles.comma} data-aos="fade-down">, </span><h2 data-aos="fade-down">{t("am")}</h2>
+          <h1 data-aos="fade-left">Clovis</h1>
+          </div>
+          <p data-aos="fade-right">Desenvolvedor Full Stack com mais de 3 anos de experiência, especializado em desenvolvimento front-end utilizando React.js, Next.js e Node.js, com foco na entrega de interfaces dinâmicas e intuitivas.</p>
         </div>
         <div className={styles.buttonContainer}>
           <Button type="submit">
@@ -32,6 +34,9 @@ const Main = () => {
               Curriculo
             </a>
           </Button>
+          <button className={styles.xpButton}>
+            Minhas experiências
+          </button>
         </div>
       </div>
       <div className={styles.image}>

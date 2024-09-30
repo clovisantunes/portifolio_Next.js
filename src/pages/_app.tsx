@@ -1,6 +1,6 @@
 import { appWithTranslation } from 'next-i18next';
 
-import '../../styles/globals.scss';
+import '../styles/globals.scss';
 
 function App({ Component, pageProps }) {
 

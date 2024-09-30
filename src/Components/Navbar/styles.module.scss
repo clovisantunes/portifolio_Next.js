@@ -1,21 +1,37 @@
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0; 
+  }
+  100% {
+    transform: translateY(0); 
+    opacity: 1; 
+}
+}
 .container {
-  width: 100%;
-  height: 8vh;
-  border-bottom: 2px solid var(--pink);
-  padding: 1.5vh;
-  position: fixed;
+  width: 30%;
+  height: 6em;
   z-index: 5;
-  background-color: var(--background-color);
+  top: 8px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: none;
+  animation: slideDown 0.5s ease forwards; 
 }
 .navbar {
   display: flex;
-  justify-content: space-between;
+  width: 85%;
+  height: 2.5em;
+  background-color: #212121;
+  border-radius: 16px;
+  justify-content: space-around;
   align-items: center;
-  margin: 0 25%;
-  height: 6vh;
 }
 .logoImg {
-  max-width: 200px;
+  max-width: 120px;
   max-height: 80px;
   width: auto;
   height: auto;
@@ -29,19 +45,42 @@
 }
 .items li {
   list-style-type: none;
-  margin-left: 3vh;
-  background-image: linear-gradient(120deg, var(--white), var(--pink));
+  margin-left: 16px;
   background-repeat: no-repeat;
   background-size: 0 3px;
   background-position: left bottom;
-  transition: background-size 500ms ease;
+  transition: background-size 500ms ease, color 300ms ease, text-shadow 300ms ease;
   border-radius: 2vh;
   font-size: 1.2em;
+  display: flex;
+  align-items: center; 
 }
 
 .li:hover {
   color: var(--white);
   background-size: 100% 3px;
+  text-shadow: 0 0 8px #9D4AE6; 
+}
+
+.li a {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.li a:hover {
+  color: var(--white);
+}
+
+.li a svg {
+  margin-right: 8px; 
+  transition: color 300ms ease, text-shadow 300ms ease;
+}
+
+.li:hover svg {
+  color: var(--white);
+  text-shadow: 0 0 16px #9D4AE6;
 }
 .hamburgerButton {
   display: none;

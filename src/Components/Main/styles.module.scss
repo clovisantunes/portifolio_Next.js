@@ -1,37 +1,84 @@
 .containerMain {
+  width: 100%;
+  padding: 10%;
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 0% 0% 0 25%;
+  justify-content: center;
   overflow: hidden;
 }
 .intro {
+  display: flex;
+  flex-direction: column;
+  .text{
+    display: flex;
+    text-align: center;
+  }
   h2 {
-    font-size: 8vh;
+    font-size: 48px;
     color: var(--white);
+    font-family: "inter";
+    font-weight: lighter;
   }
   h1 {
     color: var(--pink);
-    font-size: 4em;
+    margin-left: 8px;
+    font-size: 48px;
+    font-weight: 400;
   }
   p {
-    font-size: 2em;
+    font-size: 24px;
     color: var(--grey);
+    font-weight: 400;
+    font-weight: lighter;
+  }
+  span{
+    font-size: 36px;
+    color: #B292FF;
+    margin-right: 4px;
+    font-weight: 400;
   }
 }
 .containerItems {
-  width: 100%;
+  width: 40%;
   height: 100%;
-  margin-top: 10rem;
 }
 .image {
-  width: 100%;
-  height: 100%;
+  width: 30%;
+  margin-left: 8%;
+  height: auto;
 }
 .imgMain {
   width: 100%;
   height: 100%;
+}
+.buttonContainer {
+  margin-top: 2em;
+  display: flex;
+  
+  .xpButton {
+    text-align: center;
+    margin-left: 4em;
+    border: none;
+    font-size: 18px;
+    background: none;
+    color: #B292FF;
+    font-family: "Nunito";
+    transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 20px; 
+  }
+
+  .xpButton:hover {
+    color: #fff; 
+    box-shadow: 0 0 10px rgba(178, 146, 255, 0.8), 
+                0 0 20px rgba(178, 146, 255, 0.6), 
+                0 0 30px rgba(178, 146, 255, 0.4); 
+    transform: scale(1.05); 
+    text-shadow: 0 0 5px rgba(178, 146, 255, 0.8), 
+                 0 0 10px rgba(178, 146, 255, 0.5);
+  }
 }
 
 @media (max-width: 1100px) {
