@@ -1,79 +1,112 @@
-.container{
+.container {
     display: flex;
     justify-content: center;
-    width: 100%;
+    height: 36em;
     margin-top: 10vh;
     margin-bottom: 10vh;
     overflow: hidden;
+    position: relative;
 }
-.cardContainer{
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20%; 
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05); 
+    border-radius: 100%; 
+    transform: translateY(-50%);
+    filter: blur(124px); 
+    pointer-events: none;
+}
+
+.cardContainer {
     display: flex;
     flex-direction: row;
     border-radius: 0.5vh;
-    width: 90%;
-   border: solid 2px var(--grey-700);
-    background-color: var(--grey-900);
-    box-shadow:  1px 1px 1px 1px var(--grey-700); 
-}
-.image{
-    width: 60%;
-    height: 100%;
-}
-.imgText{
-    width: 100%;
-    height: 100%;
-}
-.aboutContainer{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding: 4vh;
+    width: 40%;
+    align-items: center;
     justify-content: center;
 }
-.textInitial{
-    font-size: 2rem;
-    color: var(--pink);
-    margin-bottom: 2vh;
-}
-.name{
-    font-size: 4rem;
-    color: var(--white);
-}
-.developer{
-    font-size: 2.5rem;
-    color: var(--grey);
-    margin-bottom: 3vh;
-}
-.text{
-    font-size: 1.4rem;
-    color: var(--white);
-}
-.buttonsItems{
-    display: flex;
-    flex-direction: row;
-    padding-top: 1rem;
+
+.image {
+    margin-left: 50%;
 }
 
-@media (max-width: 1280px){
-    .container{
+.stacksContainer {
+    width: 60%; 
+    height: 100%; 
+    overflow-x: auto;
+    overflow-y: hidden; 
+    display: flex;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none; 
+    }
+}
+
+.stacks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none; 
+    }
+}
+
+.stackItem {
+    width: 20em; 
+    height: 12em;
+    padding: 0 0 0px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius:  60px;
+    margin-right: 2em;
+    flex: 0 0 auto; 
+    span{
+        font-family: roleway;
+        font-size: 26px;
+        font-weight: 700;
+        color: #272727;
+    }
+    .icon svg{
+        width: 36px;
+        height: 48px;
+    }
+}
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+
+    button {
+        height: 40px; 
+        margin: 0 0.5em;
+        transition: width 0.3s; 
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
         height: 100%;
     }
-    .cardContainer{
+    .cardContainer {
         width: 80%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        text-align: center;
-        
+        text-align: center;        
     }
-    .image{
+    .image {
         width: 90%;
         height: 70%;
     }
-    .buttonsItems{
+    .buttonsItems {
         justify-content: center;
     }
-    
-
 }

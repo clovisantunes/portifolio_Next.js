@@ -26,7 +26,7 @@ const Main = () => {
           <h2 data-aos="fade-down">{t('apresentation')}</h2> <span className={styles.comma} data-aos="fade-down">, </span><h2 data-aos="fade-down">{t("am")}</h2>
           <h1 data-aos="fade-left">Clovis</h1>
           </div>
-          <p data-aos="fade-right">Desenvolvedor Full Stack com mais de 3 anos de experiência, especializado em desenvolvimento front-end utilizando React.js, Next.js e Node.js, com foco na entrega de interfaces dinâmicas e intuitivas.</p>
+          <p data-aos="fade-right">Desenvolvedor Full Stack com mais de 3 anos de experiência, especializado em desenvolvimento front-end utilizando React.js, Next.js e Node.js, com foco na entrega de interfaces dinâmicas e intuitivas. Além disso, possui sólida experiência em suporte de infraestrutura e servidores, garantindo a estabilidade e eficiência de sistemas em diferentes ambientes.</p>
         </div>
         <div className={styles.buttonContainer}>
           <Button type="submit">
