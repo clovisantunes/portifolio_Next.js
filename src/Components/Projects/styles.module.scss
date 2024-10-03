@@ -1,7 +1,7 @@
 .container {
   display: flex;
   justify-content: center;
- 
+ margin-bottom: 8em;
   width: 100%;
   height: 100%;
 }
@@ -10,7 +10,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   width: 80%;
   height: 90%;
 }
@@ -22,7 +21,7 @@
   margin-bottom: 1.5em;
   border-bottom: solid 2px var(--pink);
 }
-.butonContainer {
+.buttonContainer {
   width: 100%;
   height: 100%;
   justify-content: center;
@@ -35,29 +34,30 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
-  height: 100%;
+  height: 16em;
+
+  button{
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 16px;
+  }
 }
 
 .imgCard {
-  width: 100%;
-  height: 65%;
-  z-index: 2;
-  
 }
 
 .cover {
-    bottom: 13%;
+    bottom: -1%;
     background-color: var(--grey-700);
     width: 100%;
-    height: 4.5em;
+    height: 5em;
   position: absolute;
   z-index: 1;
   padding: 0.5em;
   display: flex;
-  border-bottom: solid 2px var(--pink);
-  border-bottom-left-radius: 2vh;
-  border-bottom-right-radius: 2vh;
+  border-top: solid 2px var(--pink);
+  border-top-left-radius: 2vh;
+  border-top-right-radius: 2vh;
 }
 .cover.visible {
   animation: fadeIn 0.8s ease;
@@ -67,6 +67,7 @@
   flex-direction: row;
   display: flex;
   width: 100%;
+  
   button{
     position: absolute;
     right: 0;
@@ -82,16 +83,15 @@
 
 .projectTitle.visible {
   z-index: 3;
-  animation: fadeIn 0.8s ease;
   width:90%;
 }
 
 @keyframes fadeIn {
   0% {
-    bottom: 50%;
+    bottom: -50%;
   }
   100% {
-    bottom: 13%;
+    bottom: -1%;
   }
 }
 

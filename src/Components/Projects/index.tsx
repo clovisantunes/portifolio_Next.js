@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import Image from "next/image";
 import { CardProjects } from "../UI/CardProjects";
 import styles from "./styles.module.scss";
+import DevRoom from '../../img/devRoom.png'
 import imgNetflix from "../../img/Mini_netflix_V2.png";
 import imgPokedex from "../../img/pokedex.png";
 import imgSpotify from "../../img/spotify.png";
@@ -14,7 +15,6 @@ import imgImob from "../../img/imobiliaria.png";
 import imgRoute from "../../img/img16.png";
 import Modal from 'react-modal';
 import ModalProject from "../ModalProject";
-import imgRick from '../../img/rickandmorty.png'
 import {
   FaHtml5,
   FaCss3Alt,
@@ -37,7 +37,7 @@ const Projects = () => {
     Aos.init({ duration: 2000 });
   }, []);
   const { t } = useTranslation();
-  const rickAndMorty = t("project1");
+  const devRoom = t("project1");
   const easyRoute = t("project2");
   const Pizzaria = t("project3");
   const Imobiliaria = t("project4");
@@ -50,21 +50,20 @@ const Projects = () => {
   const projectsData = [
     {
       id:1,
-      title: "Rick And Mory",
+      title: "DevRoom",
       icons: [
         <FaCss3Alt />,
         <FaHtml5 />,
         <FaReact />,
         <FaSass />,
         <SiTypescript />,
-        <SiNextdotjs />,
       ],
       link: 'https://github.com/clovisantunes/rickandmorty',
-      deploy:"https://rickandmorty-plumbus.vercel.app/",
-      img: imgRick,
+      deploy:"https://devroom.tech/",
+      img: DevRoom,
       description:
-          rickAndMorty
-    },
+            devRoom
+    }/*
     {
       id:2,
       title: "Easy Route",
@@ -149,7 +148,7 @@ const Projects = () => {
       img: imgNetflix,
       link: 'https://github.com/clovisantunes/netflix_clone',
       description: cloneNetlix,
-    },
+    },*/
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
@@ -173,7 +172,7 @@ const Projects = () => {
   return (
     <div className={styles.container} data-aos="fade-up">
       <div className={styles.containerProjects}>
-        <div className={styles.text}>Todos os Projetos</div>
+        <div className={styles.text}>Projetos</div>
         <div className={styles.buttonContainer}>
           <div className={styles.buttonCard}>
             {projectsData.map((project, index) => (
@@ -189,6 +188,7 @@ const Projects = () => {
                     src={project.img}
                     alt={project.description}
                     className={styles.imgCard}
+                    layout="responsive" 
                   />
                   {activeIndex === index && (
                     <div

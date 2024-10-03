@@ -2,33 +2,36 @@
     display: flex;
     justify-content: center;
     height: 36em;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .container::before {
     content: '';
     position: absolute;
     top: 50%;
-    left: 20%; 
+    left: 16%; 
     width: 200px;
     height: 200px;
     background: rgba(255, 255, 255, 0.05); 
     border-radius: 100%; 
     transform: translateY(-50%);
     filter: blur(124px); 
+
     pointer-events: none;
 }
-
-.cardContainer {
+.xpStacks{
     display: flex;
     flex-direction: row;
     border-radius: 0.5vh;
-    width: 40%;
+}
+.cardContainer {
+    display: flex;
     align-items: center;
     justify-content: center;
+    width: 35%;
 }
 
 .image {
@@ -42,6 +45,8 @@
     overflow-y: hidden; 
     display: flex;
     scrollbar-width: none;
+    border-radius: 2em;
+    transition: scroll 2s ease-in-out;
     &::-webkit-scrollbar {
         display: none; 
     }
@@ -52,6 +57,7 @@
     flex-direction: row;
     align-items: center;
     scrollbar-width: none;
+    transition: scroll 2s ease-in-out;
     &::-webkit-scrollbar {
         display: none; 
     }
@@ -82,15 +88,47 @@
     display: flex;
     justify-content: center;
     margin-top: 1em;
-
+    width: 100%;
+  
     button {
-        height: 40px; 
-        margin: 0 0.5em;
-        transition: width 0.3s; 
-        cursor: pointer;
+      width: 24px;
+      height: 16px; 
+      border-radius: 8px;
+      border: none;
+      background-color: #606060;
+      margin: 0 0.5em;
+      cursor: pointer;
+      animation: buttonShrink 1.8s ease forwards; 
     }
-}
-
+  
+    .activeButton {
+      width: 64px;
+      background-color: #D9D9D9;
+      animation: buttonExpand 0.4s ease forwards; 
+    }
+  }
+  
+  @keyframes buttonExpand {
+    0% {
+      width: 24px;
+      background-color: #606060;
+    }
+    100% {
+      width: 64px;
+      background-color: #D9D9D9; 
+    }
+  }
+  
+  @keyframes buttonShrink {
+    0% {
+      width: 64px;
+      background-color: #D9D9D9; 
+    }
+    100% {
+      width: 24px;
+      background-color: #606060; 
+    }
+  }
 @media (max-width: 1280px) {
     .container {
         height: 100%;

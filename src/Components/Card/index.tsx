@@ -11,6 +11,9 @@ import { useTranslation } from 'next-i18next';
 const CardProfile = () => {
   const stacksRef = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [activeButton, setActiveButton] = useState(0); // Estado para controlar o botão ativo
+  const [intervalId, setIntervalId] = useState(null);
+
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -31,7 +34,7 @@ const CardProfile = () => {
 
   const scrollToPosition = (position) => {
     if (stacksRef.current) {
-      const itemWidth = stacksRef.current.children[0].clientWidth; 
+      const itemWidth = stacksRef.current.children[0].clientWidth;
       const scrollToPosition = position * itemWidth;
       stacksRef.current.scrollTo({ left: scrollToPosition, behavior: 'smooth' });
       setScrollPosition(position);
@@ -40,70 +43,99 @@ const CardProfile = () => {
 
   const handleScrollLeft = () => {
     scrollToPosition(0);
+    setActiveButton(0);
   };
 
   const handleScrollCenter = () => {
-      if (stacksRef.current) {
-        const itemWidth = stacksRef.current.children[0].clientWidth; 
-        const totalWidth = stacksRef.current.scrollWidth; 
-        const containerWidth = stacksRef.current.clientWidth; 
-        const middlePosition = (totalWidth - containerWidth) / 2; 
-        
-        stacksRef.current.scrollTo({ left: middlePosition, behavior: 'smooth' });
-        setScrollPosition(Math.floor(stacks.length / 2)); 
-    };
+    if (stacksRef.current) {
+      const itemWidth = stacksRef.current.children[0].clientWidth;
+      const totalWidth = stacksRef.current.scrollWidth;
+      const containerWidth = stacksRef.current.clientWidth;
+      const middlePosition = (totalWidth - containerWidth) / 2;
+
+      stacksRef.current.scrollTo({ left: middlePosition, behavior: 'smooth' });
+      setScrollPosition(Math.floor(stacks.length / 2));
+      setActiveButton(1); 
+    }
   };
 
   const handleScrollRight = () => {
-    const newPosition = Math.min(scrollPosition + 1, stacks.length - 1); 
+    const newPosition = Math.min(scrollPosition + 1, stacks.length - 1);
     scrollToPosition(newPosition);
+    setActiveButton(2); 
   };
+
+  const autoScroll = () => {
+    setIntervalId(
+      setInterval(() => {
+        if (activeButton === 0) {
+          handleScrollCenter();
+        } else if (activeButton === 1) {
+          handleScrollRight();
+        } else {
+          handleScrollLeft();
+        }
+      }, 2000)
+    );
+  };
+
+  useEffect(() => {
+    autoScroll(); 
+
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId); 
+      }
+    };
+  }, [activeButton]);
 
   return (
     <div className={styles.container} data-aos="fade-up">
-      <div className={styles.cardContainer}>
-        <div className={styles.image}>
-          <Image
-            src={imgText}
-            alt="imagem do Texto"
-            className={styles.imgText}
-          />
+      <div className={styles.xpStacks}>
+        <div className={styles.cardContainer}>
+          <div className={styles.image}>
+            <Image
+              src={imgText}
+              alt="imagem do Texto"
+              className={styles.imgText}
+            />
+          </div>
         </div>
-      </div>
-      <div className={styles.stacksContainer} ref={stacksRef}>
-        <div className={styles.stacks}>
-          {stacks.map((stack, index) => (
-            <div
-              key={index}
-              className={styles.stackItem}
-              style={{ backgroundColor: stack.backgroundColor }}
-            >
-              <span
-                className={styles.icon}
-                style={{ color: stack.iconColor }} 
+        <div className={styles.stacksContainer} ref={stacksRef}>
+          <div className={styles.stacks}>
+            {stacks.map((stack, index) => (
+              <div
+                key={index}
+                className={`${styles.stackItem} ${activeButton === index ? styles.active : ''}`}
+                style={{ backgroundColor: stack.backgroundColor }}
               >
-                {stack.icon}
-              </span>
-              <span className={styles.stackName}>{stack.nome}</span>
-            </div>
-          ))}
+                <span
+                  className={styles.icon}
+                  style={{ color: stack.iconColor }}
+                >
+                  {stack.icon}
+                </span>
+                <span className={styles.stackName}>{stack.nome}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className={styles.buttonContainer}>
-        <button 
+        <button
           onClick={handleScrollLeft}
+          className={`${styles.scrollButton} ${activeButton === 0 ? styles.activeButton : ''}`}
         >
-          Anterior
         </button>
-        <button 
-          onClick={handleScrollCenter} 
+        <button
+          onClick={handleScrollCenter}
+          className={`${styles.scrollButton} ${activeButton === 1 ? styles.activeButton : ''}`}
         >
-          Início
         </button>
-        <button 
-          onClick={handleScrollRight} 
+        <button
+          onClick={handleScrollRight}
+          className={`${styles.scrollButton}  ${activeButton === 2 ? styles.activeButton : ''}`}
         >
-          Próximo
         </button>
       </div>
     </div>

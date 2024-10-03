@@ -5,6 +5,7 @@
   .modalItem {
     display: flex;
     flex-direction: column;
+    z-index: 99;
 
     .name {
       width: 100%;
