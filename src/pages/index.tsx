@@ -9,6 +9,7 @@ import CardProfile from "../Components/Card";
 import Projects  from "../Components/Projects";
 import Footer from "../Components/UI/Footer";
 import Contact from "../Components/Contact";
+import Tech from "../Components/Tech";
 
 
 export default function Home() {
@@ -34,6 +35,9 @@ export default function Home() {
         </div>
         <div id="Projects">
           <Projects />
+        </div>
+        <div id="tech">
+          <Tech />
         </div>
         <div id="Contact">
           <Contact />
