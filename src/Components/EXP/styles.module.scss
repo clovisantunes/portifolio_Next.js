@@ -1,0 +1,68 @@
+.expContainer {
+    width: 100%;
+    margin-top: 8em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    h2 {
+        font-size: 36px;
+        color: #B292FF;
+        margin-bottom: 2em;
+    }
+}
+
+.cards {
+    width: 40%;
+    justify-content: center;
+    text-align: left;
+    margin-bottom: 20px;
+
+    h3 {
+        font-size: 24px;
+        font-weight: 300;
+        color: #EEEEEE;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        
+        button {
+            width: 48px;
+            height: 48px;
+            border-radius: 100%;
+            border: none;
+            margin-right: 16px;
+            font-weight: 400;
+            font-size: 24px;
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rotate {
+            transform: rotate(360deg); 
+        }
+    }
+
+    .description {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        opacity: 0; 
+    }
+
+    &.expanded .description {
+        max-height: 1000px;
+        opacity: 1; 
+    }
+
+    p {
+        font-size: 18px;
+        color: #9f9e9e;
+        margin-left: 66px;
+    }
+}

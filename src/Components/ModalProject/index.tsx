@@ -36,7 +36,7 @@ export default function ModalProject({
       Transform: "translate(-50%, 50%)",
       backgroundColor: "#151515",
       width: "70%",
-      height: "80%",
+      height: "70%",
     },
   };
 
@@ -50,11 +50,7 @@ export default function ModalProject({
   return (
     <Modal isOpen={isOpen} onRequestClose={onRequestClose} style={customStyles}>
       <div className={styles.buttons}>
-        <Button type="button" className={styles.button}>
-          <a href={link} target="__blank">
-            <AiFillGithub />
-          </a>
-        </Button>
+     
 
         <button
           type="button"
@@ -67,17 +63,14 @@ export default function ModalProject({
       </div>
       <div className={styles.modalContainer}>
         <div className={styles.modalItem}>
-          <div className={styles.name}>
-            <span>{title}</span>
-          </div>
-          <div className={styles.modalDescription}>
             <div className={styles.image}>
               <Image src={img} alt={title} />
             </div>
+          <div className={styles.modalDescription}>
+          <div className={styles.name}>
+            <span>{title}</span>
+          </div>
             <div className={styles.modalInformation}>
-              <div className={styles.iconsContainer}>
-                <div className={styles.icon}>{icons}</div>
-              </div>
               <div>
                 <span>{description}</span>
               </div>

@@ -1,112 +1,85 @@
 .modalContainer {
   width: 100%;
-  height: 80%;
+  height: 100%;
   overflow: auto;
+
   .modalItem {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     z-index: 99;
 
-    .name {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      border-bottom: solid 2px var(--pink);
-      margin-bottom: 2em;
-      span {
-        font-size: 2em;
-        color: var(--white);
+    .image {
+      width: 50%;
+      height: 36em;
+      overflow-y: scroll; 
+      img {
+        width: 100%; 
+        height: auto; 
+        object-fit: contain; 
       }
     }
-    .modalDescription {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
 
-      .image {
-        width: 60%;
-        height: 35vh;
-        img {
-          width: 100%;
-          height: 100%;
-          max-width: auto;
-          max-height: auto;
-        }
-        .buttonsContainer{
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          width: 57.5%;
-          position: absolute;
-          top: 37%;
-          .buttonArrows{
-            width: 5%;
-            height: 2.5em;
-            background: var(--grey);
-            color: var(--white);
-            opacity: .7;
-            border: none;
-            border-radius: .2em;
-            transition: all .5s ease;
-          }
-          .buttonArrows:hover{
-            opacity: 1;
-          }
-        }
-      }
-      .modalInformation {
+    
+    .modalDescription {
+      width: 40%;
+      height: 100%;
+      margin-left: 16px;
+      display: flex;
+      text-align: left;
+      flex-direction: column;
+      padding-top: 4em;
+      .name {
+        width: 40%;
         display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 2%;
-        flex-wrap: wrap;
-        justify-content: center;
-        .iconsContainer {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 10px;
-          .icon {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            svg {
-              width: 2em;
-              height: 100%;
-              margin: 0 .3em;
-              color: var(--pink);
-            }
-          }
+        border-bottom: solid 2px var(--pink);
+        margin-bottom: 2em;
+        text-align: center;
+        span{
+          font-size: 28px;
         }
       }
       span {
-        font-family: sans-serif;
-        font-weight: 400;
-        font-size: 1.3em;
+        font-size: 18px;
         color: var(--white);
       }
+
+     button{
+      margin-top: 24px;
+     }
+    }
+
+    .modalInformation {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 2%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    span {
+      font-family: sans-serif;
+      font-weight: 400;
+      font-size: 1.3em;
+      color: var(--white);
     }
   }
 }
 
 .buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   width: 100%;
-  .button{
+
+  .button {
     background: none;
     border: none;
     color: var(--white);
-    svg{
+
+    svg {
       width: 2em;
       height: 2em;
       color: var(--pink);
-
     }
   }
 }
@@ -114,6 +87,7 @@
 @media (max-width: 1024px) {
   .modalContainer {
     width: 100%;
+
     .modalDescription {
       font-size: 70%;
     }
@@ -122,30 +96,32 @@
 
 @media (max-width: 480px) {
   .modalContainer {
-    .modalDescription{
-      .image{
+    .modalDescription {
+      .image {
         min-width: 100%;
         max-height: 20em;
       }
-    .modalInformation {
-      height: 50%;
-      gap: 40px;
 
-    }
+      .modalInformation {
+        height: 50%;
+        gap: 40px;
+      }
+
       .iconsContainer {
         .icon {
           display: flex;
-      
+
           svg {
             width: 1em;
             height: 1em;
-            margin: 1em .5em;
+            margin: 1em 0.5em;
           }
         }
       }
     }
-    .iconsContainer{
-      svg{
+
+    .iconsContainer {
+      svg {
         width: 1.5em;
         height: 1.5em;
       }

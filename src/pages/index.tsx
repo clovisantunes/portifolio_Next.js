@@ -10,6 +10,7 @@ import Projects  from "../Components/Projects";
 import Footer from "../Components/UI/Footer";
 import Contact from "../Components/Contact";
 import Tech from "../Components/Tech";
+import EXP from "../Components/EXP";
 
 
 export default function Home() {
@@ -38,6 +39,9 @@ export default function Home() {
         </div>
         <div id="tech">
           <Tech />
+        </div>
+        <div id="EXP">
+          <EXP />
         </div>
         <div id="Contact">
           <Contact />
