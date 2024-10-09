@@ -34,12 +34,12 @@ const Navbar = () => {
           </button>
           <ul className={`${styles.items} ${showMenu ? styles.showMenu : ""}`}>
             <li className={styles.li}>
-              <a href="#main" onClick={closeMenu}>
+              <a href="#Projects" onClick={closeMenu}>
                 {t('init')}
               </a>
             </li>
             <li className={styles.li}>
-              <a href="#cardProfile" onClick={closeMenu}>
+              <a href="#EXP" onClick={closeMenu}>
                 {t('about')}
               </a>
             </li>
