@@ -30,14 +30,15 @@ export default function ModalProject({
     content: {
       top: "15%",
       bottom: "auto",
-      left: "15%",
+      left: "50%", 
+      transform: "translate(-50%, 0)", 
       overflow: "hidden",
       right: "auto",
-      padding: "30px",
-      Transform: "translate(-50%, 50%)",
+      padding: "0",
       backgroundColor: "#151515",
-      width: "70%",
-      height: "70%",
+      width: "90%", 
+      height: "auto", 
+      maxHeight: "90vh", 
     },
   };
 

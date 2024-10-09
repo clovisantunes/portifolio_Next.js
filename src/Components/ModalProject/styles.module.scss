@@ -91,7 +91,7 @@
 
     .modalDescription {
       width: 95%;
-
+      padding:1em 0;
     }
     .image{
       width: 100%;
@@ -103,17 +103,32 @@
 
 @media (max-width: 480px) {
   .modalContainer {
-    .modalDescription {
-      .image {
-        min-width: 100%;
-        max-height: 20em;
-      }
+    .modalItem{
 
-      .modalInformation {
-        height: 50%;
-        gap: 40px;
+      .modalDescription {
+        button{
+          margin: 0;
+        }
+        .name{
+          span{
+            font-size: 14px;
+          }
+        }
+        span{
+          font-size: 12px;
+        }
       }
-
+        .image {
+          min-width: 100%;
+          max-height: 10em;
+        }
+        
+        .modalInformation {
+          height: 50%;
+          gap: 40px;
+          padding: 0;
+        }
+        
       .iconsContainer {
         .icon {
           display: flex;
