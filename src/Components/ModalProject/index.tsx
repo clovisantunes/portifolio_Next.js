@@ -31,6 +31,7 @@ export default function ModalProject({
       top: "15%",
       bottom: "auto",
       left: "15%",
+      overflow: "hidden",
       right: "auto",
       padding: "30px",
       Transform: "translate(-50%, 50%)",

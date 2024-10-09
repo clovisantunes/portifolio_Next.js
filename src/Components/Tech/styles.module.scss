@@ -6,19 +6,50 @@
     justify-content: center;
     margin-top: 12em;
     text-align: center;
-    h1{
+
+    h1 {
         font-size: 36px;
         color: #C8C8C8;
         font-weight: 300;
         font-family: raleway;
     }
+
+    // Responsividade para telas menores
+    @media (max-width: 768px) {
+        margin-top: 6em;
+        
+        h1 {
+            font-size: 28px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        margin-top: 4em;
+
+        h1 {
+            font-size: 24px;
+        }
+    }
 }
-.blocks{
+
+.blocks {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 16px; 
+    gap: 16px;
+
+    // Responsividade para telas menores
+    @media (max-width: 768px) {
+        gap: 12px;
+    }
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
 }
+
 .tech_category {
     position: relative;
     padding: 16px;
@@ -26,8 +57,8 @@
     color: white;
     text-align: center;
     background-color: #111111;
-    border-radius: 16px; 
-    
+    border-radius: 16px;
+
     &::before {
         content: "";
         position: absolute;
@@ -37,7 +68,7 @@
         bottom: -2px;
         z-index: -1;
         background: linear-gradient(45deg, #232323, #434343, #232323);
-        border-radius: inherit; 
+        border-radius: inherit;
     }
 
     h3 {
@@ -61,6 +92,34 @@
 
         .icon {
             font-size: 24px;
+        }
+    }
+
+    // Responsividade para telas menores
+    @media (max-width: 768px) {
+        width: 240px;
+
+        .tech_item {
+            gap: 6px;
+            padding: 6px;
+
+            .icon {
+                font-size: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        width: 80%;
+        padding: 12px;
+
+        .tech_item {
+            gap: 4px;
+            padding: 4px;
+
+            .icon {
+                font-size: 18px;
+            }
         }
     }
 }

@@ -133,8 +133,15 @@
     .container {
         height: 100%;
     }
+    .xpStacks{
+      flex-direction: column;
+    }
+    .stacksContainer{
+      width: 100%;
+      padding: 2em;
+    }
     .cardContainer {
-        width: 80%;
+        width: 30%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -147,4 +154,11 @@
     .buttonsItems {
         justify-content: center;
     }
+}
+@media (max-width: 480px) {
+  .stackItem{
+    width: 15em;
+    height: 10em;
+    border-radius: 16px;
+  }
 }

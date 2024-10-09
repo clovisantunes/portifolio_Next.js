@@ -44,17 +44,17 @@ const Navbar = () => {
               </a>
             </li>
             <li className={styles.li}>
-              <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/clovisantunes" target="_blank" rel="noopener noreferrer">
                 <FiGithub />
               </a>
             </li>
             <li className={styles.li}>
-              <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/clovis-antunes/" target="_blank" rel="noopener noreferrer">
                 <FiLinkedin />
               </a>
             </li>
             <li className={styles.li}>
-              <a href="mailto:seu-email@example.com">
+              <a href="mailto:clovissantannaa@gmail.com">
                 <FiMail />
               </a>
             </li>

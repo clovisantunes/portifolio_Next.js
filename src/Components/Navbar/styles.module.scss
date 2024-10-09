@@ -85,7 +85,10 @@
 .hamburgerButton {
   display: none;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1800px) {
+  .container{
+    width: 80%;
+  }
   .logoImg {
     max-width: 100px;
     max-height: 80px;
@@ -102,9 +105,9 @@
 }
 @media (max-width: 760px) {
   .navOpen {
-    height: 120vh;
+    height: 80vh;
     background-color: var(--grey);
-    justify-content: center;
+    justify-content: space-around;
     transition: all .5s ease;
   }
   .hamburgerButton {
@@ -112,7 +115,6 @@
     background: none;
     border: none;
     z-index: 1;
-    position: absolute;
     right: 15px;
     top: 15px;
 
@@ -127,7 +129,6 @@
   }
 
   .logoImg {
-    position: absolute;
     left: 10px;
     top: 15px;
   }
@@ -140,10 +141,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: 0;
+    top: -10%;
     position: absolute;
-    height: 120vh;
-    width: 100%;
+    height: 80vh;
+    width: 125%;
     background: var(--background-card);
    
 

@@ -89,6 +89,7 @@
   }
   .image {
     width: 50%;
+    margin:10% 0;
     height: 100%;
     align-items: center;
     display: flex;
@@ -100,6 +101,7 @@
   }
   .containerItems {
     text-align: center;
+    width: 80%;
   }
   .intro {
     h2 {
@@ -111,12 +113,41 @@
       font-size: 3em;
     }
     p {
-      font-size: 1em;
+      font-size: 24px;
       color: var(--grey);
     }
   }
 }
-@media (max-width: 760) {
+@media (max-width: 780px) {
+  .containerMain{
+    margin-top: 8em;
+    h1{
+      font-size: 24px;
+    }
+    h2{
+      font-size: 24px;
+    }
+  }
+  .intro{
+    p {
+      font-size: 18px;
+      color: var(--grey);
+    text-align: left;
+
+    }
+    span{
+
+      font-size: 24px;
+    }
+  }
+  .buttonContainer{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .xpButton{
+      margin: 2em 0;
+    }
+  }
   .image {
     width: 50%;
     height: 100%;
