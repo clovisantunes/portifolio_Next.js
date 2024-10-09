@@ -33,9 +33,7 @@ import {
 import { useTranslation } from 'next-i18next';
 
 const Projects = () => {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
+
   const { t } = useTranslation();
   const devRoom = t("project1");
   const easyRoute = t("project2");

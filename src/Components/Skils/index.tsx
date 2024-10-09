@@ -21,9 +21,7 @@ import "aos/dist/aos.css";
 import { useTranslation } from 'next-i18next';
 export const Skills = () => {
 
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
+
 
   const { t } = useTranslation();
   const initialSkill = t("skillCard");

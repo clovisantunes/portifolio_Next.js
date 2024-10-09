@@ -15,9 +15,6 @@ const CardProfile = () => {
   const [intervalId, setIntervalId] = useState(null);
 
 
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
 
   const { t } = useTranslation();
 
