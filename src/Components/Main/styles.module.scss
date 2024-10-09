@@ -10,35 +10,43 @@
 .intro {
   display: flex;
   flex-direction: column;
-  .text{
+
+  .text {
     display: flex;
     text-align: center;
+    align-items: center; // Adicione esta linha
   }
+
   h2 {
     font-size: 48px;
     color: var(--white);
     font-family: "inter";
     font-weight: lighter;
   }
+
   h1 {
     color: var(--pink);
     margin-left: 8px;
     font-size: 48px;
     font-weight: 400;
   }
+
   p {
     font-size: 24px;
     color: var(--grey);
     font-weight: 400;
-    font-weight: lighter;
   }
-  span{
+
+  span {
     font-size: 36px;
     color: #B292FF;
     margin-right: 4px;
     font-weight: 400;
+    display: inline-flex; // Adicione esta linha
+    align-items: center; // Adicione esta linha
   }
 }
+
 .containerItems {
   width: 40%;
   height: 100%;
@@ -120,6 +128,7 @@
 }
 @media (max-width: 780px) {
   .containerMain{
+    padding: 0;
     margin-top: 8em;
     h1{
       font-size: 24px;

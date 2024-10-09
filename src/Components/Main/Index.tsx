@@ -8,7 +8,7 @@ import imgMain from "../../img/profile.png";
 import Image from "next/image";
 
 const curriculum =
-  "https://www.mediafire.com/file/xhvr1i645en0prr/curriculo.pdf/file";
+  "https://drive.google.com/uc?export=download&id=1S3D4_hCZ-fJ6BmXb64Cqqr7yO8gCOxaL";
 
 const Main = () => {
   useEffect(() => {
@@ -30,12 +30,14 @@ const Main = () => {
         </div>
         <div className={styles.buttonContainer}>
           <Button type="submit">
-            <a href={curriculum} target="_blank">
+            <a href={curriculum} >
               Curriculo
             </a>
           </Button>
-          <button className={styles.xpButton}>
+          <button className={styles.xpButton} >
+            <a href="#EXP">
             Minhas experiências
+            </a>
           </button>
         </div>
       </div>
