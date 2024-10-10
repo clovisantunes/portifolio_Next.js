@@ -10,7 +10,7 @@
 
     h2 {
         font-size: 36px;
-        color: #B292FF;
+        color: #8C52FF; /* Tom mais forte e vibrante */
         margin-bottom: 2em;
     }
 
@@ -33,7 +33,7 @@
     h3 {
         font-size: 24px;
         font-weight: 300;
-        color: #EEEEEE;
+        color: #FFFFFF; /* Branco para maior contraste */
         margin-bottom: 16px;
         display: flex;
         align-items: center;
@@ -50,6 +50,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: #8C52FF; /* Botão com destaque */
+            color: white; /* Texto branco no botão */
         }
 
         .rotate {
@@ -71,7 +73,7 @@
 
     p {
         font-size: 18px;
-        color: #9f9e9e;
+        color: #CCCCCC; /* Texto mais suave, mas ainda legível */
         margin-left: 66px;
     }
 
@@ -80,7 +82,7 @@
 
         h3 {
             font-size: 20px;
-           
+
             button {
                 width: 40px;
                 height: 40px;
@@ -100,6 +102,7 @@
         h3 {
             font-size: 14px;
             flex-direction: row-reverse;
+
             button {
                 width: 36px;
                 height: 36px;

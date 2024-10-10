@@ -9,12 +9,11 @@
 
     h1 {
         font-size: 36px;
-        color: #C8C8C8;
+        color: #E0E0E0; 
         font-weight: 300;
         font-family: raleway;
     }
 
-    // Responsividade para telas menores
     @media (max-width: 768px) {
         margin-top: 6em;
         
@@ -38,7 +37,6 @@
     flex-wrap: wrap;
     gap: 16px;
 
-    // Responsividade para telas menores
     @media (max-width: 768px) {
         gap: 12px;
     }
@@ -54,9 +52,9 @@
     position: relative;
     padding: 16px;
     width: 300px;
-    color: white;
+    color: #FFFFFF; 
     text-align: center;
-    background-color: #111111;
+    background-color: #222222; 
     border-radius: 16px;
 
     &::before {
@@ -67,12 +65,13 @@
         right: -2px;
         bottom: -2px;
         z-index: -1;
-        background: linear-gradient(45deg, #232323, #434343, #232323);
+        background: linear-gradient(45deg, #7B4AE2, #6A3FCC); 
         border-radius: inherit;
     }
 
     h3 {
         margin-bottom: 16px;
+        color: #D1D1D1; 
     }
 
     .tech_items {
@@ -88,14 +87,14 @@
         gap: 8px;
         padding: 8px;
         border-radius: 8px;
-        color: white;
+        color: #FFFFFF;
 
         .icon {
             font-size: 24px;
+            color: #7B4AE2; 
         }
     }
 
-    // Responsividade para telas menores
     @media (max-width: 768px) {
         width: 240px;
 
