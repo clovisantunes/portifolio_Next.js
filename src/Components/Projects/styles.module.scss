@@ -12,6 +12,7 @@
   align-items: center;
   width: 80%;
   height: 90%;
+  
 }
 .text {
   font-size: 2.5em;
@@ -27,6 +28,12 @@
   justify-content: center;
   display: flex;
   align-items: center;
+  @media(max-width: 780px){
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
 }
 .buttonCard {
   display: flex;
@@ -35,7 +42,9 @@
   display: flex;
   flex-wrap: wrap;
   height: 16em;
-
+  @media(max-width: 780px){
+    height: auto;
+  }
   button{
     overflow: hidden;
     object-fit: cover;

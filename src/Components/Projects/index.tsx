@@ -61,23 +61,23 @@ const Projects = () => {
       img: DevRoom,
       description:
             devRoom
-    }/*
+    },
     {
       id:2,
-      title: "Easy Route",
+      title: "Portifolio Dandara",
       icons: [
         <FaCss3Alt />,
         <FaHtml5 />,
-        <FaReact />,
         <FaSass />,
         <SiTypescript />,
         <SiNextdotjs />,
       ],
-      link: 'https://github.com/clovisantunes/easy_route',
+      link: 'https://github.com/clovisantunes/portifolio_dandara',
+      deploy:"https://portifolio-dandara.vercel.app/",
       img: imgRoute,
       description:
       easyRoute,
-    },
+    }/*
     {
       id:3,
       title: "Pizzaria",

@@ -34,11 +34,11 @@ export default function ModalProject({
       transform: "translate(-50%, 0)", 
       overflow: "hidden",
       right: "auto",
-      padding: "0",
+      padding: "16px",
       backgroundColor: "#151515",
-      width: "90%", 
-      height: "auto", 
-      maxHeight: "90vh", 
+      width: "70%", 
+      height: '36em',
+ 
     },
   };
 
