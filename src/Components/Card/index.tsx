@@ -11,7 +11,7 @@ import { useTranslation } from 'next-i18next';
 const CardProfile = () => {
   const stacksRef = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [activeButton, setActiveButton] = useState(0); // Estado para controlar o botão ativo
+  const [activeButton, setActiveButton] = useState(0); 
   const [intervalId, setIntervalId] = useState(null);
 
 
